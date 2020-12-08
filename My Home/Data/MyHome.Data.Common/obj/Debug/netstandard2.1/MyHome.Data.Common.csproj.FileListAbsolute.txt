@@ -1,0 +1,9 @@
+C:\Users\Lenovo\Desktop\My hHome\Data\MyHome.Data.Common\bin\Debug\netstandard2.1\MyHome.Data.Common.deps.json
+C:\Users\Lenovo\Desktop\My hHome\Data\MyHome.Data.Common\bin\Debug\netstandard2.1\MyHome.Data.Common.dll
+C:\Users\Lenovo\Desktop\My hHome\Data\MyHome.Data.Common\bin\Debug\netstandard2.1\MyHome.Data.Common.pdb
+C:\Users\Lenovo\Desktop\My hHome\Data\MyHome.Data.Common\obj\Debug\netstandard2.1\MyHome.Data.Common.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\My hHome\Data\MyHome.Data.Common\obj\Debug\netstandard2.1\MyHome.Data.Common.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\My hHome\Data\MyHome.Data.Common\obj\Debug\netstandard2.1\MyHome.Data.Common.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\My hHome\Data\MyHome.Data.Common\obj\Debug\netstandard2.1\MyHome.Data.Common.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\My hHome\Data\MyHome.Data.Common\obj\Debug\netstandard2.1\MyHome.Data.Common.dll
+C:\Users\Lenovo\Desktop\My hHome\Data\MyHome.Data.Common\obj\Debug\netstandard2.1\MyHome.Data.Common.pdb

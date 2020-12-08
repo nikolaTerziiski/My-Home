@@ -1,0 +1,16 @@
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\obj\Debug\netstandard2.1\MyHome.Services.Data.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\obj\Debug\netstandard2.1\MyHome.Services.Data.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\obj\Debug\netstandard2.1\MyHome.Services.Data.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\obj\Debug\netstandard2.1\MyHome.Services.Data.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\bin\Debug\netstandard2.1\MyHome.Services.Data.deps.json
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\bin\Debug\netstandard2.1\MyHome.Services.Data.dll
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\bin\Debug\netstandard2.1\MyHome.Services.Data.pdb
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\bin\Debug\netstandard2.1\MyHome.Data.Common.dll
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\bin\Debug\netstandard2.1\MyHome.Data.Models.dll
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\bin\Debug\netstandard2.1\MyHome.Services.Mapping.dll
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\bin\Debug\netstandard2.1\MyHome.Data.Common.pdb
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\bin\Debug\netstandard2.1\MyHome.Data.Models.pdb
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\bin\Debug\netstandard2.1\MyHome.Services.Mapping.pdb
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\obj\Debug\netstandard2.1\MyHome.Services.Data.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\obj\Debug\netstandard2.1\MyHome.Services.Data.dll
+C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Data\obj\Debug\netstandard2.1\MyHome.Services.Data.pdb

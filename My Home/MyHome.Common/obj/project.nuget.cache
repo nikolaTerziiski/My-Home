@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7QYh1M0bbfs+U7RqKAQr2pQUKZ95GfT2Ef8BVIjjM9PfedP+0PFbwUl3DGGMb9KW2XhWMlvSR3Y6wG84V/4Lhg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\MyHome.Common\\MyHome.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
+  ],
+  "logs": []
+}
