@@ -1,7 +1,10 @@
-﻿@{
+﻿@model MyHome.Web.ViewModels.Property.CreateHomeInputModel
+@{
+    this.ViewData["Title"] = "Create Home";
+    var categories = this.Model.Categories.Select(x => new SelectListItem( x.Value, x.Key));
 }
 
-<form method="post">
+<form method="post" class="col-sm-6">
     <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
