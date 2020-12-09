@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Xd5P7N5BZU6Rcd3aBaqXCMZZK50iItlgV0zhiI4HDkaN22WLqo9xrdAHnPB/pm3N20robtR0WFA8/Flnhpzkw==",
+  "dgSpecHash": "Chm+GMPOxClRkhrYRSe6uW5jsCrc+l5GSqGIoNzrGCHI8nRy/z0vj4MHgeVsfNcpgATDBmEHShqY4E47nkErgg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",

@@ -6153,11 +6153,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Tests\\Sandbox\\Sandbox.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Tests\\Sandbox\\Sandbox.csproj",
       "projectName": "Sandbox",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Tests\\Sandbox\\Sandbox.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Tests\\Sandbox\\Sandbox.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Tests\\Sandbox\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Tests\\Sandbox\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6177,29 +6177,29 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Lenovo\\Desktop\\My hHome\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\My hHome\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\My hHome\\Data\\MyHome.Data\\MyHome.Data.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Data\\MyHome.Data\\MyHome.Data.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Data\\MyHome.Data\\MyHome.Data.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Data\\MyHome.Data\\MyHome.Data.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\My hHome\\MyHome.Common\\MyHome.Common.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\MyHome.Common\\MyHome.Common.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\MyHome.Common\\MyHome.Common.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\MyHome.Common\\MyHome.Common.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services\\MyHome.Services.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services\\MyHome.Services.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services\\MyHome.Services.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services\\MyHome.Services.csproj"
             }
           }
         }

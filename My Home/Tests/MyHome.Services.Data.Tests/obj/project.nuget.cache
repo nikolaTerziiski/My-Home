@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BmGZF2eLsd1Svaj3LisI1lp49u/fdigzXAfkYUnS3RW54aMKBXuBubEXSSlnyvrBgaca219hyIUpEMiPJlNqCQ==",
+  "dgSpecHash": "GRJV6EdOFRR51tR1GBAENRGHOvRnEhMbzry1ZGcOZ9JiPv1G4Fp0aezVYLiyxYSCDk9khN00yV7NJnhJclVxSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Tests\\MyHome.Services.Data.Tests\\MyHome.Services.Data.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Tests\\MyHome.Services.Data.Tests\\MyHome.Services.Data.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",

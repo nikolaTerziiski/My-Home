@@ -66,11 +66,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services\\MyHome.Services.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services\\MyHome.Services.csproj",
       "projectName": "MyHome.Services",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services\\MyHome.Services.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services\\MyHome.Services.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,10 +1,11 @@
 ﻿namespace FindPlace.Data.Models
 {
+    using MyHome.Data.Common.Models;
     using System;
     using System.Collections.Generic;
     using System.Text;
 
-    public class Category
+    public class Category : BaseDeletableModel<int>
     {
         public Category()
         {

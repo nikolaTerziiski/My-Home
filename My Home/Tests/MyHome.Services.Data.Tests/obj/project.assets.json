@@ -8572,11 +8572,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Tests\\MyHome.Services.Data.Tests\\MyHome.Services.Data.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Tests\\MyHome.Services.Data.Tests\\MyHome.Services.Data.Tests.csproj",
       "projectName": "MyHome.Services.Data.Tests",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Tests\\MyHome.Services.Data.Tests\\MyHome.Services.Data.Tests.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Tests\\MyHome.Services.Data.Tests\\MyHome.Services.Data.Tests.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Tests\\MyHome.Services.Data.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Tests\\MyHome.Services.Data.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8596,11 +8596,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Lenovo\\Desktop\\My hHome\\Data\\MyHome.Data\\MyHome.Data.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Data\\MyHome.Data\\MyHome.Data.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Data\\MyHome.Data\\MyHome.Data.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Data\\MyHome.Data\\MyHome.Data.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj"
             }
           }
         }

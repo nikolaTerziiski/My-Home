@@ -1,13 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace MyHome.Web.Controllers
+﻿namespace MyHome.Web.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+
+    using Microsoft.AspNetCore.Mvc;
+    using MyHome.Data;
+    using MyHome.Services.Data;
+    using MyHome.Web.ViewModels.Property;
+
     public class PropertyController : Controller
     {
+        private readonly ICategoryService categoryService;
+
+        public PropertyController(ICategoryService categoryService)
+        {
+            this.categoryService = categoryService;
+        }
+
         public IActionResult Index()
         {
             return this.View();
@@ -16,7 +27,9 @@ namespace MyHome.Web.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return this.View();
+            var viewModel = new CreateHomeInputModel();
+            viewModel.Categories = this.categoryService.GetAllCategories();
+            return this.View(viewModel);
         }
 
 

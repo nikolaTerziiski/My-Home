@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj": {}
+    "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj",
         "projectName": "MyHome.Services.Messaging",
-        "projectPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Services\\MyHome.Services.Messaging\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

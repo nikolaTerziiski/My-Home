@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sjsNKc6YVuAHWTYGf/cy1iFw3qq+STNdQBAB4aQsOns25+blZMmI+vRs+7xiFUs4fR/iFLKCxsF4ZRQvqHdgAg==",
+  "dgSpecHash": "wHF1xKOcyQeMobmgnnlgvyn/XubXY8FHVrbqJd3cKPNzkAU9Sp5cOeJ83yRxsAPnb8iRps1gdQQcpK0w6Eut1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\My hHome\\Tests\\Sandbox\\Sandbox.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Tests\\Sandbox\\Sandbox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\commandlineparser\\2.8.0\\commandlineparser.2.8.0.nupkg.sha512",
