@@ -18,25 +18,32 @@
         [MinLength(20)]
         public string Description { get; set; }
 
-        [Range(1900,2020)]
+        [Range(1900, 2020)]
         public int YearOfProduction { get; set; }
 
         [Required]
-        public string Adrress { get; set; }
+        [MinLength(5)]
+        public string Adress { get; set; }
 
         public DateTime UploadDate { get; set; } = DateTime.UtcNow;
 
         [Required]
+        [Range(1, 5)]
         public int Rooms { get; set; }
 
         [Required]
+        [Range(30,400)]
         public int Sqauring { get; set; }
 
-        [Display(Name = "Please enter the town, where the property is.")]
-        public int TownId { get; set; }
+        public int Town { get; set; }
 
-        public IEnumerable<KeyValuePair<string,string>> Categories { get; set; }
+        public IEnumerable<KeyValuePair<string,string>> Towns { get; set; }
 
+        public int Category { get; set; }
+
+        public IEnumerable<KeyValuePair<string, string>> Categories { get; set; }
+
+        [Required]
         public IEnumerable<IFormFile> Images { get; set; }
     }
 }

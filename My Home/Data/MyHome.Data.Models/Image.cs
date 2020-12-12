@@ -14,6 +14,8 @@
             this.Id = Guid.NewGuid().ToString();
         }
 
+        public string Extension { get; set; }
+
         public int PropertyId { get; set; }
 
         public virtual Home Property { get; set; }

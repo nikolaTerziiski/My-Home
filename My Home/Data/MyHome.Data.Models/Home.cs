@@ -41,6 +41,6 @@
 
         public virtual Category Category { get; set; }
 
-        public IEnumerable<Image> Images { get; set; }
+        public ICollection<Image> Images { get; set; }
     }
 }

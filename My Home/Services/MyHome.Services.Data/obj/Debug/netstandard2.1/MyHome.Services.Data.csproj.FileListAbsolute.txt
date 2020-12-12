@@ -30,3 +30,5 @@ C:\Users\Lenovo\Desktop\My-Home\My Home\Services\MyHome.Services.Data\obj\Debug\
 C:\Users\Lenovo\Desktop\My-Home\My Home\Services\MyHome.Services.Data\obj\Debug\netstandard2.1\MyHome.Services.Data.csproj.CopyComplete
 C:\Users\Lenovo\Desktop\My-Home\My Home\Services\MyHome.Services.Data\obj\Debug\netstandard2.1\MyHome.Services.Data.dll
 C:\Users\Lenovo\Desktop\My-Home\My Home\Services\MyHome.Services.Data\obj\Debug\netstandard2.1\MyHome.Services.Data.pdb
+C:\Users\Lenovo\Desktop\My-Home\My Home\Services\MyHome.Services.Data\bin\Debug\netstandard2.1\MyHome.Web.ViewModels.dll
+C:\Users\Lenovo\Desktop\My-Home\My Home\Services\MyHome.Services.Data\bin\Debug\netstandard2.1\MyHome.Web.ViewModels.pdb
