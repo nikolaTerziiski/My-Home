@@ -9,6 +9,7 @@
 
     using FindPlace.Data.Models;
     using MyHome.Data.Common.Repositories;
+    using MyHome.Services.Mapping;
     using MyHome.Web.ViewModels.Property;
 
     public class PropertyService : IPropertyService
@@ -59,6 +60,14 @@
 
             await this.propertyRepository.AddAsync(home);
             await this.propertyRepository.SaveChangesAsync();
+        }
+
+        public DetailsPropertyViewModel TakeById<DetailsPropertyViewModel>(int id)
+        {
+            var baseProperty = this.propertyRepository.AllAsNoTracking()
+                .Where(x => x.Id == id).To<DetailsPropertyViewModel>().FirstOrDefault();
+
+            return baseProperty;
         }
     }
 }

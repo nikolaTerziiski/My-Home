@@ -9,5 +9,7 @@
     public interface IPropertyService
     {
         public Task CreateAsync(CreateHomeInputModel inputModel, string userId, string path);
+
+        public T TakeById<T>(int id);
     }
 }
