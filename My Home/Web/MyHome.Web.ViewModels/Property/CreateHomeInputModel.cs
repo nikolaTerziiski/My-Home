@@ -7,42 +7,12 @@
 
     using Microsoft.AspNetCore.Http;
 
-    public class CreateHomeInputModel
+    public class CreateHomeInputModel : BasePropertyInputModel
     {
-
-        [Required]
-        [MinLength(4)]
-        public string Title { get; set; }
-
-        [Required]
-        [MinLength(20)]
-        public string Description { get; set; }
-
-        [Range(1900, 2020)]
-        public int YearOfProduction { get; set; }
-
-        [Required]
-        [MinLength(5)]
-        public string Adress { get; set; }
-
-        public DateTime UploadDate { get; set; } = DateTime.UtcNow;
-
-        [Required]
-        [Range(1, 5)]
-        public int Rooms { get; set; }
-
-        [Required]
-        [Range(30,400)]
-        public int Sqauring { get; set; }
-
-        public int Town { get; set; }
-
-        public IEnumerable<KeyValuePair<string,string>> Towns { get; set; }
-
-        public int Category { get; set; }
-
-        public IEnumerable<KeyValuePair<string, string>> Categories { get; set; }
-
+        public CreateHomeInputModel()
+        {
+            this.Images = new HashSet<IFormFile>();
+        }
         [Required]
         public IEnumerable<IFormFile> Images { get; set; }
     }

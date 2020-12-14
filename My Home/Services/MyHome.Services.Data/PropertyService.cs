@@ -28,12 +28,12 @@
             {
                 Title = inputModel.Title,
                 Description = inputModel.Description,
-                Adrress = inputModel.Adress,
+                Adress = inputModel.Adress,
                 Rooms = inputModel.Rooms,
                 Sqauring = inputModel.Sqauring,
                 YearOfProduction = inputModel.YearOfProduction,
-                CategoryId = inputModel.Category,
-                TownId = inputModel.Town,
+                CategoryId = inputModel.CategoryId,
+                TownId = inputModel.TownId,
                 AddedByUserId = userId,
             };
             Directory.CreateDirectory($"{path}/homes");
@@ -62,12 +62,27 @@
             await this.propertyRepository.SaveChangesAsync();
         }
 
-        public DetailsPropertyViewModel TakeById<DetailsPropertyViewModel>(int id)
+        public T TakeById<T>(int id)
         {
-            var baseProperty = this.propertyRepository.AllAsNoTracking()
-                .Where(x => x.Id == id).To<DetailsPropertyViewModel>().FirstOrDefault();
+            var propetyFromData = this.propertyRepository.AllAsNoTracking()
+                .Where(x => x.Id == id).To<T>().FirstOrDefault();
 
-            return baseProperty;
+            return propetyFromData;
+        }
+
+        public async Task UpdateAsync(int id, EditHomeInputModel inputModel)
+        {
+            var home = this.propertyRepository.All().First(x => x.Id == id);
+            home.Title = inputModel.Title;
+            home.Description = inputModel.Description;
+            home.YearOfProduction = inputModel.YearOfProduction;
+            home.CategoryId = inputModel.CategoryId;
+            home.Adress = inputModel.Adress;
+            home.Rooms = inputModel.Rooms;
+            home.Sqauring = inputModel.Sqauring;
+            home.TownId = inputModel.TownId;
+
+            await this.propertyRepository.SaveChangesAsync();
         }
     }
 }

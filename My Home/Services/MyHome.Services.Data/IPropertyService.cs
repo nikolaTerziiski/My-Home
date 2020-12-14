@@ -11,5 +11,7 @@
         public Task CreateAsync(CreateHomeInputModel inputModel, string userId, string path);
 
         public T TakeById<T>(int id);
+
+        public Task UpdateAsync(int id,  EditHomeInputModel inputModel);
     }
 }

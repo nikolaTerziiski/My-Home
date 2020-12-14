@@ -21,7 +21,7 @@
 
         public int YearOfProduction { get; set; }
 
-        public string Adrress { get; set; }
+        public string Adress { get; set; }
 
         public DateTime UploadDate { get; set; }
 

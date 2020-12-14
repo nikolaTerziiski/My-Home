@@ -11,7 +11,6 @@ namespace MyHome.Web.ViewModels.Property
 {
     public class DetailsPropertyViewModel : IMapFrom<Home>
     {
-        
         public DetailsPropertyViewModel()
         {
             this.Images = new HashSet<Image>();
@@ -25,7 +24,7 @@ namespace MyHome.Web.ViewModels.Property
 
         public int YearOfProduction { get; set; }
 
-        public string Adrress { get; set; }
+        public string Adress { get; set; }
 
         public DateTime UploadDate { get; set; }
 

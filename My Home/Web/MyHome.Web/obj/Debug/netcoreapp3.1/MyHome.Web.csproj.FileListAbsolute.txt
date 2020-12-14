@@ -917,3 +917,4 @@ C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\netcoreapp3.1\M
 C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\netcoreapp3.1\MyHome.Web.pdb
 C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\netcoreapp3.1\MyHome.Web.genruntimeconfig.cache
 C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\netcoreapp3.1\Razor\Views\Details\Property.cshtml.g.cs
+C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\netcoreapp3.1\Razor\Views\Edit\Property.cshtml.g.cs
