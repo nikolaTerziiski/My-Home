@@ -5,7 +5,7 @@
     using System.Linq;
     using System.Text;
 
-    using FindPlace.Data.Models;
+    using MyHome.Data.Models;
     using MyHome.Data.Common.Repositories;
 
     public class CategoryService : ICategoryService

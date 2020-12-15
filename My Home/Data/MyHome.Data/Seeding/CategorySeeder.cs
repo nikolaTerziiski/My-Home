@@ -6,7 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    using FindPlace.Data.Models;
+    using MyHome.Data.Models;
 
     public class CategorySeeder : ISeeder
     {

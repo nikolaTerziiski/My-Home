@@ -23,6 +23,8 @@ namespace MyHome.Web.ViewModels.Property
         [MinLength(5)]
         public string Adress { get; set; }
 
+        public int Price { get; set; }
+
         public DateTime UploadDate { get; set; } = DateTime.UtcNow;
 
         [Required]

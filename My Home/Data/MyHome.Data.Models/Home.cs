@@ -1,4 +1,4 @@
-﻿namespace FindPlace.Data.Models
+﻿namespace MyHome.Data.Models
 {
     using System;
     using System.Collections.Generic;
@@ -21,13 +21,17 @@
 
         public int YearOfProduction { get; set; }
 
+        public float Price { get; set; }
+
         public string Adress { get; set; }
 
         public DateTime UploadDate { get; set; }
 
         public int Rooms { get; set; }
-		
-		public int Sqauring { get; set; }
+
+        public HomeStatus Status { get; set; }
+
+        public int Sqauring { get; set; }
 
         public int TownId { get; set; }
 

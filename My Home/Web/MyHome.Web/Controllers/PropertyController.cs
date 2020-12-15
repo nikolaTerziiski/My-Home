@@ -67,5 +67,23 @@
             return this.Redirect("/");
         }
 
+        [HttpGet]
+        public IActionResult AllHomes(int pageId)
+        {
+            if (pageId <= 0)
+            {
+                this.RedirectToAction("NotFound");
+            }
+            int itemsPerPage = 9;
+
+            var viewModel = new PropertiesListViewModel
+            {
+                ItemsPerPage = itemsPerPage,
+                PageNumber = pageId,
+                Properties = this.propertyService.GetAll(pageId, itemsPerPage),
+            };
+
+            return this.View(viewModel);
+        }
     }
 }

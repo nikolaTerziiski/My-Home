@@ -11,8 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyHome.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Data\\MyHome.Data", "MyHome.Data.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyHome.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Web\\MyHome.Web", "MyHome.Web.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyHome.Web.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]

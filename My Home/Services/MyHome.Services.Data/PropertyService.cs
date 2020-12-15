@@ -7,7 +7,7 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    using FindPlace.Data.Models;
+    using MyHome.Data.Models;
     using MyHome.Data.Common.Repositories;
     using MyHome.Services.Mapping;
     using MyHome.Web.ViewModels.Property;
@@ -35,6 +35,8 @@
                 CategoryId = inputModel.CategoryId,
                 TownId = inputModel.TownId,
                 AddedByUserId = userId,
+                Status = inputModel.HomeStatus,
+                Price = inputModel.Price,
             };
             Directory.CreateDirectory($"{path}/homes");
 
@@ -60,6 +62,13 @@
 
             await this.propertyRepository.AddAsync(home);
             await this.propertyRepository.SaveChangesAsync();
+        }
+
+        public IEnumerable<PropertyInListViewModel> GetAll(int id, int listCount)
+        {
+            var result = this.propertyRepository.AllAsNoTracking().OrderByDescending(x => x.Id).Skip((id - 1) * listCount).Take(listCount).ToList();
+
+            throw new Exception();
         }
 
         public T TakeById<T>(int id)

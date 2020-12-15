@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using FindPlace.Data.Models;
+using MyHome.Data.Models;
 using Microsoft.AspNetCore.Http;
 using MyHome.Services.Mapping;
 using System;

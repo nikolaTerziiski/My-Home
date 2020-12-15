@@ -1,4 +1,4 @@
-﻿namespace FindPlace.Data.Models
+﻿namespace MyHome.Data.Models
 {
     using MyHome.Data.Common.Models;
     using System;

@@ -2583,7 +2583,8 @@
         "dependencies": {
           "MyHome.Data.Common": "1.0.0",
           "MyHome.Data.Models": "1.0.0",
-          "MyHome.Services.Mapping": "1.0.0"
+          "MyHome.Services.Mapping": "1.0.0",
+          "MyHome.Web.ViewModels": "1.0.0"
         },
         "runtime": {
           "MyHome.Services.Data.dll": {}
