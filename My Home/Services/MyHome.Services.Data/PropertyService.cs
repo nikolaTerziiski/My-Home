@@ -72,6 +72,19 @@
             return result;
         }
 
+        public IEnumerable<PropertyInListViewModel> GetAllWithCategory(string type, int id, int listCount)
+        {
+            var result = this.propertyRepository.AllAsNoTracking().Where(x => x.Category.Name.ToLower() == type.ToLower()).OrderByDescending(x => x.Id).Skip((id - 1) * listCount).Take(listCount)
+                .To<PropertyInListViewModel>().ToList();
+
+            return result;
+        }
+
+        public int GetAllWithCategoryCount(string type)
+        {
+            return this.propertyRepository.AllAsNoTracking().Where(x => x.Category.Name.ToLower() == type.ToLower()).Count();
+        }
+
         public int GetCount()
         {
             return this.propertyRepository.AllAsNoTracking().Count();

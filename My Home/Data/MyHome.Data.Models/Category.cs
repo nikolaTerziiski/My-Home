@@ -1,9 +1,10 @@
 ﻿namespace MyHome.Data.Models
 {
-    using MyHome.Data.Common.Models;
     using System;
     using System.Collections.Generic;
     using System.Text;
+
+    using MyHome.Data.Common.Models;
 
     public class Category : BaseDeletableModel<int>
     {

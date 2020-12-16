@@ -21,13 +21,22 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Property" asp-action="AllHomes" asp-route-id="1">Search homes</a>
+                            <a class="nav-link text-dark" asp-controller="Property" asp-action="Select">Search homes</a>
                         </li>
                         @if (this.User.Identity.IsAuthenticated)
                         {
+                            if (this.User.IsInRole("Administrator"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="All"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Create">Create Category</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Property" asp-action="Delete">Delete Properties</a>
+                                </li>
+                            }
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Property" asp-action="Create">Create Home</a>
                             </li>

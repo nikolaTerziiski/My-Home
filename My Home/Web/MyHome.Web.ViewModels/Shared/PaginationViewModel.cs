@@ -6,6 +6,8 @@ namespace MyHome.Web.ViewModels.Shared
 {
     public class PaginationViewModel
     {
+        public string Title { get; set; }
+
         public int ItemsPerPage { get; set; }
 
         public int PageNumber { get; set; }

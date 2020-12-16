@@ -40,6 +40,7 @@
         }
 
         [HttpGet]
+        [Authorize(Roles = "Administrator")]
         public IActionResult Create()
         {
             var viewModel = new CreateHomeInputModel();
@@ -83,8 +84,53 @@
                 PageNumber = id,
                 Properties = this.propertyService.GetAll(id, itemsPerPage),
                 AllHomesCount = this.propertyService.GetCount() / itemsPerPage,
+                Towns = this.townService.GetAllTownsForTable(),
+                Title = "All Offers",
             };
 
+            foreach (var picture in viewModel.Properties)
+            {
+                var txt = $"/localImages/homes/{picture.Images.First().Id}.{picture.Images.First().Extension}";
+
+                picture.ImageFolderURL = txt;
+            }
+
+            return this.View(viewModel);
+        }
+    
+        [HttpGet]
+        public IActionResult Select()
+        {
+            var viewModel = new SelectCategoriesViewModel
+            {
+                Categories = this.categoryService.GetSelectCategories(),
+            };
+            foreach (var category in viewModel.Categories)
+            {
+                string txt = $"/localImages/categorySearch/{category.Id}.jpg";
+                category.ImageURL = txt;
+            }
+
+            return this.View();
+        }
+
+        public IActionResult Category(int id, string type)
+        {
+            if (id <= 0)
+            {
+                this.RedirectToAction("NotFound");
+            }
+
+            int itemsPerPage = 9;
+
+            var viewModel = new PropertiesListViewModel
+            {
+                ItemsPerPage = itemsPerPage,
+                PageNumber = id,
+                Properties = this.propertyService.GetAllWithCategory(type, id, itemsPerPage),
+                AllHomesCount = this.propertyService.GetAllWithCategoryCount(type) / itemsPerPage,
+                Title = type,
+            };
             foreach (var picture in viewModel.Properties)
             {
                 var txt = $"/localImages/homes/{picture.Images.First().Id}.{picture.Images.First().Extension}";

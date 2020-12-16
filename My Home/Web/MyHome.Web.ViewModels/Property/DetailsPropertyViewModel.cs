@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using MyHome.Data.Models;
-using MyHome.Data.Models;
 using MyHome.Services.Mapping;
 using System;
 using System.Collections.Generic;

@@ -1,0 +1,85 @@
+﻿@model MyHome.Web.ViewModels.Property.PropertiesListViewModel
+
+<h2>Houses</h2>
+<div class="row">
+    <div class="col-md-8">
+        <div class="row">
+            @foreach (var list in this.Model.Properties)
+            {
+                <div class="card col-md-5">
+                    <img class="card-img-top" src="@list.ImageFolderURL" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@list.Title</h5>
+                        <p class="card-text">
+                            @list.Price -
+                            @if (list.Status.ToString() == "ToRent")
+                            {
+                                <span style="color:green">For sale</span>
+                            }
+                            else
+                            {
+                                <span style="color:blue">For rent</span>
+                            }
+                        </p>
+                        <a style="margin-bottom: 5px" asp-controller="Details" asp-action="Property" asp-route-id="@list.Id" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        @if (this.Model.Towns.Count() == 0)
+        {
+            <h2><span style="color: red">No offers</span></h2>
+        }
+        else
+        {
+            <h2>All offers</h2>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var town in this.Model.Towns)
+                    {
+                        <tr>
+                            @if (!(town.Homes.Count() == 0))
+                            {
+                                <td><h4>@town.Name</h4></td>
+                                <td style="font-size:25px">
+                                    @if (town.Homes.Count() == 1)
+                                    {
+                                        <a asp-controller="Town" asp-action="Offers" asp-route-id="@town.Id">@town.Homes.Count() offer</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Town" asp-action="Offers" asp-route-id="@town.Id">@town.Homes.Count() offers</a>
+
+                                    }
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+<div class="row col-sm-8" style="justify-content:center;">
+    <partial name="_PaginationView" model="@Model" />
+</div>
+<style>
+    .card-img-top {
+        height: 250px;
+        width: 100%;
+    }
+
+    .card {
+        margin-bottom: 25px;
+        margin-right: 1rem;
+    }
+</style>

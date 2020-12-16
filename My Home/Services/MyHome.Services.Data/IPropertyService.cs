@@ -17,5 +17,10 @@
         public IEnumerable<PropertyInListViewModel> GetAll(int id, int listCount);
 
         public int GetCount();
+
+        public int GetAllWithCategoryCount(string type);
+
+        public IEnumerable<PropertyInListViewModel> GetAllWithCategory(string type, int id, int listCount);
+
     }
 }

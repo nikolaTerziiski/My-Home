@@ -21,7 +21,7 @@
 
         public ICollection<Image> Images { get; set; }
 
-        public string Type { get; set; }
+        public HomeStatus Status { get; set; }
 
         public float Price { get; set; }
 

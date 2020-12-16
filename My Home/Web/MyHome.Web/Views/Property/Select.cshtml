@@ -1,0 +1,53 @@
+﻿@model MyHome.Web.ViewModels.Property.SelectCategoriesViewModel
+
+<div class="row" style="justify-content:space-between">
+    <h1 style="margin-left:400px">Select category:</h1>
+    <div class="col-md-9" style="margin-left:100px; margin-top:100px">
+        <div class="row" style="justify-content:space-between; margin-left:50px">
+            @*@foreach (var category in this.Model.Categories)
+                {
+                    <div class="card col-md-3">
+                        <img class="card-img-top" src="@category.ImageURL" alt="Card image cap">
+                        <div class="card-body" style="justify-content:center">
+                            <h5 class="card-title">@category.Name</h5>
+                        </div>
+
+                    </div>
+                }*@
+            <div class="card col-md-4">
+                <a asp-controller="Property" asp-action="Apratments">
+
+                    <img class="card-img-top" src="~/localImages/categorySearch/1.jpg" alt="Card image cap">
+                    <div class="card-body" style="justify-content:center">
+                        <h5 class="card-title">Apartments</h5>
+                    </div>
+                </a>
+
+            </div>
+            <div class="card col-md-4">
+                <a asp-controller="Property" asp-action="Houses">
+
+                    <img class="card-img-top" src="~/localImages/categorySearch/2.jpg" alt="Card image cap">
+                    <div class="card-body" style="justify-content:center">
+                        <h5 class="card-title">Houses</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="card col-md-4">
+                <a asp-controller="Property" asp-action="Garages">
+                    <img class="card-img-top" src="~/localImages/categorySearch/3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">Garages</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    img {
+        width: 50px;
+        height: 100px;
+    }
+</style>
