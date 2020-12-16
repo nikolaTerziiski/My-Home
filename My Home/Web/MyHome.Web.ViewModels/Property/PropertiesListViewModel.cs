@@ -4,12 +4,16 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public class PropertiesListViewModel
-    {
-        public int ItemsPerPage { get; set; }
+    using MyHome.Web.ViewModels.Shared;
 
-        public int PageNumber { get; set; }
+    public class PropertiesListViewModel : PaginationViewModel
+    {
+        public PropertiesListViewModel()
+        {
+            this.Properties = new HashSet<PropertyInListViewModel>();
+        }
 
         public IEnumerable<PropertyInListViewModel> Properties { get; set; }
+
     }
 }

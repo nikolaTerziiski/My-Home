@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyHome.Data.Models;
 using MyHome.Services.Data;
@@ -24,6 +25,7 @@ namespace MyHome.Web.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Property(int id)
         {
             var baseProperty = this.propertyService.TakeById<DetailsPropertyViewModel>(id);

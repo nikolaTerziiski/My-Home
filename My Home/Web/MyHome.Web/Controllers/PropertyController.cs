@@ -68,20 +68,29 @@
         }
 
         [HttpGet]
-        public IActionResult AllHomes(int pageId)
+        public IActionResult AllHomes(int id)
         {
-            if (pageId <= 0)
+            if (id <= 0)
             {
                 this.RedirectToAction("NotFound");
             }
+
             int itemsPerPage = 9;
 
             var viewModel = new PropertiesListViewModel
             {
                 ItemsPerPage = itemsPerPage,
-                PageNumber = pageId,
-                Properties = this.propertyService.GetAll(pageId, itemsPerPage),
+                PageNumber = id,
+                Properties = this.propertyService.GetAll(id, itemsPerPage),
+                AllHomesCount = this.propertyService.GetCount() / itemsPerPage,
             };
+
+            foreach (var picture in viewModel.Properties)
+            {
+                var txt = $"/localImages/homes/{picture.Images.First().Id}.{picture.Images.First().Extension}";
+
+                picture.ImageFolderURL = txt;
+            }
 
             return this.View(viewModel);
         }

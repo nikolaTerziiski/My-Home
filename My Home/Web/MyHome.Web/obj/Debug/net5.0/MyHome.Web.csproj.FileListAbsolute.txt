@@ -464,3 +464,4 @@ C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\ref\MyHo
 C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\MyHome.Web.pdb
 C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\MyHome.Web.genruntimeconfig.cache
 C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Property\AllHomes.cshtml.g.cs
+C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Shared\_PaginationView.cshtml.g.cs

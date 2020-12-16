@@ -33,6 +33,8 @@
 
         public int Sqauring { get; set; }
 
+        public int Likes { get; set; }
+
         public int TownId { get; set; }
 
         public Town Town { get; set; }

@@ -15,5 +15,7 @@
         public Task UpdateAsync(int id,  EditHomeInputModel inputModel);
 
         public IEnumerable<PropertyInListViewModel> GetAll(int id, int listCount);
+
+        public int GetCount();
     }
 }

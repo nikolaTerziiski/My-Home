@@ -66,9 +66,15 @@
 
         public IEnumerable<PropertyInListViewModel> GetAll(int id, int listCount)
         {
-            var result = this.propertyRepository.AllAsNoTracking().OrderByDescending(x => x.Id).Skip((id - 1) * listCount).Take(listCount).ToList();
+            var result = this.propertyRepository.AllAsNoTracking().OrderByDescending(x => x.Id).Skip((id - 1) * listCount).Take(listCount)
+                .To<PropertyInListViewModel>().ToList();
 
-            throw new Exception();
+            return result;
+        }
+
+        public int GetCount()
+        {
+            return this.propertyRepository.AllAsNoTracking().Count();
         }
 
         public T TakeById<T>(int id)
