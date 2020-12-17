@@ -5,8 +5,8 @@
     var towns = this.Model.Towns.Select(x => new SelectListItem(x.Value, x.Key));
 
 }
-
-<form method="post" id="formForEdit">
+ 
+<form method="post" class="col-sm-6 offset-3" id="formForEdit">
     <div class="form-group">
         <label asp-for="Title">Title</label>
         <input asp-for="Title" type="text" class="form-control" id="inputTitle" placeholder="@Model.Title">
@@ -25,7 +25,7 @@
     </div>
     <div class="form-group">
         <label asp-for="Adress">Adress</label>
-        <input asp-for="Adress" type="text" class="form-control" placeholder="@Model.Adress" />
+        <input asp-for="Adress" type="text" class="form-control" value="@this.Model.Adress" />
         <span asp-validation-for="Adress" class="text-danger"></span>
     </div>
     <div class="form-group">
@@ -38,16 +38,24 @@
         <input asp-for="Sqauring" type="text" value="@Model.Sqauring" class="form-control" rows="1" placeholder="Squaring...">
         <span asp-validation-for="Sqauring" class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <label asp-for="CategoryId"></label>
-        <select asp-for="CategoryId" value="@Model.CategoryId" class="form-control" asp-items="categories"></select>
-        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    <div class="row">
+        <div class="col-sm-4">
+            <label asp-for="CategoryId">Category</label>
+            <select asp-for="CategoryId" class="form-control" asp-items="categories"></select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+        <div class="col-sm-4">
+            <label asp-for="TownId">Town</label>
+            <select asp-for="TownId" class="form-control" asp-items="towns"></select>
+            <span asp-validation-for="TownId" class="text-danger"></span>
+        </div>
+        <div class="col-sm-4">
+            <label asp-for="Price">Price in BGN</label>
+            <input asp-for="Price" type="text" class="form-control" rows="1" placeholder="Price.." value="">
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="TownId"></label>
-        <select asp-for="TownId" value="@Model.TownId" class="form-control" asp-items="towns"></select>
-        <span asp-validation-for="TownId" class="text-danger"></span>
-    </div>
+    <br />
     <button type="submit" data-toggle="modal" data-target="#saveChangesModal" class="btn btn-primary">Save changes</button>
 </form>
 

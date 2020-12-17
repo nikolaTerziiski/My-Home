@@ -1,7 +1,47 @@
-﻿@model MyHome.Web.ViewModels.Property.DetailsPropertyViewModel
+﻿@model MyHome.Web.ViewModels.Property.DeleteHomeViewModel
+@{
+    this.ViewData["Title"] = $"Delete {this.Model.Title}";
 
+}
 
+<form method="post" class="col-sm-6 offset-3" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Title">Title</label>
+        <input asp-for="Title" type="text" class="form-control" id="inputTitle" value="@this.Model.Title" disabled>
+        <span asp-validation-for="Title" class="text-danger"></span>
 
-
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <textarea asp-for="Description" type="text" class="form-control" rows="6" disabled>@this.Model.Description</textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <label asp-for="YearOfProduction">Year of production:</label>
+            <input asp-for="YearOfProduction" type="text" class="form-control" rows="1" value="@this.Model.YearOfProduction" disabled>
+            <span asp-validation-for="YearOfProduction" class="text-danger"></span>
+        </div>
+        <div class="col-sm-4">
+            <label asp-for="Rooms">Rooms</label>
+            <input asp-for="Rooms" type="text" class="form-control" rows="1" value="@this.Model.Rooms" disabled>
+            <span asp-validation-for="Rooms" class="text-danger"></span>
+        </div>
+        <div class="col-sm-4">
+            <label asp-for="Sqauring">Squaring</label>
+            <input asp-for="Sqauring" type="text" class="form-control" rows="1" value="@this.Model.Sqauring" disabled>
+            <span asp-validation-for="Sqauring" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Adress">Adresss</label>
+        <input asp-for="Adress" type="text" class="form-control" value="@this.Model.Adress" disabled>
+        <span asp-validation-for="Adress" class="text-danger"></span>
+    </div>
+    <div class="row" style=" justify-content:space-around">
+        <button type="submit" style="margin-bottom: 5px" class="btn btn-danger">Delete</button>
+        <a style="margin-bottom: 5px" asp-controller="Edit" asp-action="Property" asp-route-id="@this.Model.Id" class="btn btn-success">Edit</a>
+    </div>
+</form>
 
 

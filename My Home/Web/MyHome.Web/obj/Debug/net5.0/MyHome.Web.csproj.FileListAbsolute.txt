@@ -476,8 +476,5 @@ C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\ref\MyHo
 C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\MyHome.Web.pdb
 C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\MyHome.Web.genruntimeconfig.cache
 C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Property\Select.cshtml.g.cs
-C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Property\Apartment.cshtml.g.cs
 C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Property\Category.cshtml.g.cs
-C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Property\Garages.cshtml.g.cs
-C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Property\Houses.cshtml.g.cs
 C:\Users\Lenovo\Desktop\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Shared\_CategoryPagination.cshtml.g.cs

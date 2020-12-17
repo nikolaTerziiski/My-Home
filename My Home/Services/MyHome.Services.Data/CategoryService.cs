@@ -21,7 +21,7 @@
 
         public bool DoesContainsCategory(string type)
         {
-            if (!this.categoryRepository.AllAsNoTracking().Select(x => x.Name).Contains(type))
+            if (!this.categoryRepository.AllAsNoTracking().Any(x => x.Name.ToLower() == type.ToLower()))
             {
                 return false;
             }

@@ -114,9 +114,10 @@
             return this.View();
         }
 
+        [HttpGet]
         public IActionResult Category(int id, string type)
         {
-            if (id <= 0)
+            if (id <= 0 || !this.categoryService.DoesContainsCategory(type))
             {
                 this.RedirectToAction("NotFound");
             }
@@ -139,6 +140,33 @@
             }
 
             return this.View(viewModel);
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Administrator")]
+        public IActionResult Delete(int id)
+        {
+            if (!this.propertyService.DoesContainProperty(id))
+            {
+                return this.RedirectToAction("NotFound");
+            }
+
+            var viewModel = this.propertyService.TakeById<DeleteHomeViewModel>(id);
+            return this.View(viewModel);
+        }
+
+        [HttpPost]
+        [Authorize(Roles ="Administrator")]
+        public async Task<IActionResult> Delete(int id, DeleteHomeViewModel viewModel)
+        {
+            if (!this.propertyService.DoesContainProperty(id))
+            {
+                return this.RedirectToAction("NotFound");
+            }
+
+            await this.propertyService.DeletePropertyAsync(id);
+
+            return this.RedirectToAction("Index", "Home");
         }
     }
 }

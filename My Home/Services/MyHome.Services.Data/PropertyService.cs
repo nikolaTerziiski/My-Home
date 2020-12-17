@@ -64,6 +64,22 @@
             await this.propertyRepository.SaveChangesAsync();
         }
 
+        public async Task DeletePropertyAsync(int id)
+        {
+            var result = this.propertyRepository.All().Where(x => x.Id == id).FirstOrDefault();
+            this.propertyRepository.Delete(result);
+            await this.propertyRepository.SaveChangesAsync();
+        }
+
+        public bool DoesContainProperty(int id)
+        {
+            if (!this.propertyRepository.AllAsNoTracking().Any(x => x.Id == id))
+            {
+                return false;
+            }
+            return true;
+        }
+
         public IEnumerable<PropertyInListViewModel> GetAll(int id, int listCount)
         {
             var result = this.propertyRepository.AllAsNoTracking().OrderByDescending(x => x.Id).Skip((id - 1) * listCount).Take(listCount)

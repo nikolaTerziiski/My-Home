@@ -22,5 +22,8 @@
 
         public IEnumerable<PropertyInListViewModel> GetAllWithCategory(string type, int id, int listCount);
 
+        public bool DoesContainProperty(int id);
+
+        public Task DeletePropertyAsync(int id);
     }
 }
