@@ -13,15 +13,19 @@ namespace MyHome.Web.Controllers
 {
     public class DetailsController : Controller
     {
+
         private readonly IPropertyService propertyService;
         private readonly Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> userManager;
+        private readonly IFavouriteService favouriteService;
 
         public DetailsController(
             IPropertyService propertyService,
-            UserManager<ApplicationUser> userManager)
+            UserManager<ApplicationUser> userManager,
+            IFavouriteService favouriteService)
         {
             this.propertyService = propertyService;
             this.userManager = userManager;
+            this.favouriteService = favouriteService;
         }
 
         [HttpGet]
@@ -40,6 +44,8 @@ namespace MyHome.Web.Controllers
             var user = await this.userManager.GetUserAsync(this.User);
             bool isHisPost = user.Id == baseProperty.AddedByUser.Id;
             this.ViewData["flag"] = isHisPost;
+
+            baseProperty.IsItFavourite = this.favouriteService.DoesContain(id, user.Id);
 
             return this.View(baseProperty);
         }

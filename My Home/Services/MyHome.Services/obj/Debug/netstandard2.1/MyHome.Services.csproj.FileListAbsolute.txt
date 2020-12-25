@@ -7,3 +7,12 @@ C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services\obj\Debug\netstandard2
 C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services\obj\Debug\netstandard2.1\MyHome.Services.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services\obj\Debug\netstandard2.1\MyHome.Services.dll
 C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services\obj\Debug\netstandard2.1\MyHome.Services.pdb
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services\bin\Debug\netstandard2.1\MyHome.Services.deps.json
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services\bin\Debug\netstandard2.1\MyHome.Services.dll
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services\bin\Debug\netstandard2.1\MyHome.Services.pdb
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services\obj\Debug\netstandard2.1\MyHome.Services.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services\obj\Debug\netstandard2.1\MyHome.Services.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services\obj\Debug\netstandard2.1\MyHome.Services.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services\obj\Debug\netstandard2.1\MyHome.Services.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services\obj\Debug\netstandard2.1\MyHome.Services.dll
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services\obj\Debug\netstandard2.1\MyHome.Services.pdb

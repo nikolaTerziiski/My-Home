@@ -7,3 +7,12 @@ C:\Users\Lenovo\Desktop\My hHome\Web\MyHome.Web.Infrastructure\obj\Debug\netstan
 C:\Users\Lenovo\Desktop\My hHome\Web\MyHome.Web.Infrastructure\obj\Debug\netstandard2.1\MyHome.Web.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\My hHome\Web\MyHome.Web.Infrastructure\obj\Debug\netstandard2.1\MyHome.Web.Infrastructure.dll
 C:\Users\Lenovo\Desktop\My hHome\Web\MyHome.Web.Infrastructure\obj\Debug\netstandard2.1\MyHome.Web.Infrastructure.pdb
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web.Infrastructure\bin\Debug\netstandard2.1\MyHome.Web.Infrastructure.deps.json
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web.Infrastructure\bin\Debug\netstandard2.1\MyHome.Web.Infrastructure.dll
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web.Infrastructure\bin\Debug\netstandard2.1\MyHome.Web.Infrastructure.pdb
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web.Infrastructure\obj\Debug\netstandard2.1\MyHome.Web.Infrastructure.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web.Infrastructure\obj\Debug\netstandard2.1\MyHome.Web.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web.Infrastructure\obj\Debug\netstandard2.1\MyHome.Web.Infrastructure.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web.Infrastructure\obj\Debug\netstandard2.1\MyHome.Web.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web.Infrastructure\obj\Debug\netstandard2.1\MyHome.Web.Infrastructure.dll
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web.Infrastructure\obj\Debug\netstandard2.1\MyHome.Web.Infrastructure.pdb

@@ -17,6 +17,7 @@ namespace MyHome.Web.ViewModels.Property
             this.ImageURLs = new List<string>();
         }
 
+        public int Id { get; set; }
         public string Title { get; set; }
 
         public string Description { get; set; }
@@ -33,6 +34,10 @@ namespace MyHome.Web.ViewModels.Property
 
         public Town Town { get; set; }
 
+        public int Likes { get; set; }
+
+        public bool IsItFavourite { get; set; }
+
         public ApplicationUser AddedByUser { get; set; }
 
         public virtual Category Category { get; set; }
@@ -40,5 +45,6 @@ namespace MyHome.Web.ViewModels.Property
         public ICollection<Image> Images { get; set; }
 
         public ICollection<string> ImageURLs { get; set; }
+
     }
 }

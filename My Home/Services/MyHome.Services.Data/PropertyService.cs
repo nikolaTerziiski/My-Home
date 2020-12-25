@@ -106,12 +106,25 @@
             return this.propertyRepository.AllAsNoTracking().Count();
         }
 
+        public async Task IncrementLikeAsync(int id)
+        {
+            var home = this.propertyRepository.All().Where(x => x.Id == id).FirstOrDefault();
+            home.Likes += 1;
+
+            await this.propertyRepository.SaveChangesAsync();
+        }
+
         public T TakeById<T>(int id)
         {
-            var propetyFromData = this.propertyRepository.AllAsNoTracking()
+            if (!this.propertyRepository.AllAsNoTracking().Any(x => x.Id == id))
+            {
+                throw new InvalidOperationException("The property does not exist!");
+            }
+
+            var propertyFromData = this.propertyRepository.AllAsNoTracking()
                 .Where(x => x.Id == id).To<T>().FirstOrDefault();
 
-            return propetyFromData;
+            return propertyFromData;
         }
 
         public async Task UpdateAsync(int id, EditHomeInputModel inputModel)

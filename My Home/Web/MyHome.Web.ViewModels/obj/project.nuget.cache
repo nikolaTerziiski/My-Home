@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nEDsix3IWQI2qTyrQ8CF5+SQdikCwn0+9hhfNDSeDMRXcZmm+5ZN+SIFQ8A9znGM/8EdZU+iKB34rXlggMMT+Q==",
+  "dgSpecHash": "RwB383I3E8V83iRxoLIxJktPKyfg+y6vwPqCqu7722SpJOovOmB4hdRO5121Bnhqb2R8/CZRcH5P+uUBaZMXYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",

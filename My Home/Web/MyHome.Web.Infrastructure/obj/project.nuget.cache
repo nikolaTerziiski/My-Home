@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JYWrPSfK2lhoLC19yq+wE6oKnsx08b43HOfS0QThEY+6xa6NjGo4bsl86QmSWmUqKgAStWiBoygCvhPTQFgrrA==",
+  "dgSpecHash": "xfszVjUwBEu60KDice0EyAxqP3W/rnsdCh5xVN+hR7j8XnQ7vajI8iNdIdBxBdSDwQilSgM5iUboS2e02jpCiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\My-Home\\My Home\\Web\\MyHome.Web.Infrastructure\\MyHome.Web.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web.Infrastructure\\MyHome.Web.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"

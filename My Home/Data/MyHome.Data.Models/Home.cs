@@ -13,6 +13,7 @@
         {
             this.Images = new HashSet<Image>();
             this.UploadDate = DateTime.UtcNow;
+            this.Favourites = new HashSet<Favourite>();
         }
 
         public string Title { get; set; }
@@ -39,11 +40,14 @@
 
         public Town Town { get; set; }
 
+
         public string AddedByUserId { get; set; }
 
         public ApplicationUser AddedByUser { get; set; }
 
         public int CategoryId { get; set; }
+
+        public ICollection<Favourite> Favourites { get; set; }
 
         public virtual Category Category { get; set; }
 

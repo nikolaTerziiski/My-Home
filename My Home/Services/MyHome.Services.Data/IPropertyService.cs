@@ -25,5 +25,7 @@
         public bool DoesContainProperty(int id);
 
         public Task DeletePropertyAsync(int id);
+
+        public Task IncrementLikeAsync(int id);
     }
 }
