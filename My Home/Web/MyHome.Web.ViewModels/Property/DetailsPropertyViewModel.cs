@@ -1,13 +1,14 @@
-﻿using AutoMapper;
-using MyHome.Data.Models;
-using MyHome.Services.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace MyHome.Web.ViewModels.Property
+﻿namespace MyHome.Web.ViewModels.Property
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
+    using AutoMapper;
+    using MyHome.Data.Models;
+    using MyHome.Services.Mapping;
+
     public class DetailsPropertyViewModel : IMapFrom<Home>
     {
         public DetailsPropertyViewModel()

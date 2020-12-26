@@ -1,6 +1,12 @@
 ﻿@model MyHome.Web.ViewModels.Property.PropertiesListViewModel
 
-<div class="row">
+@if (this.Model.Properties.Count() == 0)
+{
+    <div class="row" style="justify-content:center"><span style="color: brown; font-size:100px">No properties in this category :(</span></div>
+}
+else
+{
+    <div class="row">
         <div class="row" style="justify-content:center">
             @foreach (var list in this.Model.Properties)
             {
@@ -29,31 +35,35 @@
             }
 
         </div>
-</div>
-<div class="row col-sm-12" style="justify-content:center;">
-    <nav aria-label="Homes pagination" style="col-sm-6">
-        <ul class="pagination">
-            <li class="page-item @if (!this.Model.HasPreviousPage) {<text>disabled</text>} ">
-                <a class="page-link" asp-action="All" asp-route-id="@this.Model.PreviousPage" asp-route-type="@this.Model.Title">Previous</a>
-            </li>
-            @if (this.Model.PageNumber > 1)
-            {
-                <li class="page-item"><a class="page-link" asp-controller="Property" asp-action="AllHomes" asp-route-id="@this.Model.PreviousPage" asp-route-type="@this.Model.Title">@this.Model.PreviousPage</a></li>
+    </div>
+    <div class="row col-sm-12" style="justify-content:center;">
+        <nav aria-label="Homes pagination" style="col-sm-6">
+            <ul class="pagination">
+                <li class="page-item @if (!this.Model.HasPreviousPage)
+            {<text>disabled</text>} ">
+                    <a class="page-link" asp-action="All" asp-route-id="@this.Model.PreviousPage" asp-route-type="@this.Model.Title">Previous</a>
+                </li>
+                @if (this.Model.PageNumber > 1)
+                {
+                    <li class="page-item"><a class="page-link" asp-controller="Property" asp-action="AllHomes" asp-route-id="@this.Model.PreviousPage" asp-route-type="@this.Model.Title">@this.Model.PreviousPage</a></li>
 
-            }
-            <li class="page-item active">
-                <a class="page-link">@this.Model.PageNumber<span class="sr-only">(current)</span></a>
-            </li>
-            @if (this.Model.PageNumber < this.Model.PagesCount)
-            {
-                <li class="page-item"><a class="page-link" asp-controller="Property" asp-action="AllHomes" asp-route-id="@this.Model.NextPage" asp-route-type="@this.Model.Title">@this.Model.NextPage</a></li>
-            }
-            <li class="page-item @if (!Model.HasNextPage) { <text>disabled</text> }">
-                <a class="page-link" asp-action="All" asp-route-id="@this.Model.NextPage" asp-route-type="@this.Model.Title">Next</a>
-            </li>
-        </ul>
-    </nav>
-</div>
+                }
+                <li class="page-item active">
+                    <a class="page-link">@this.Model.PageNumber<span class="sr-only">(current)</span></a>
+                </li>
+                @if (this.Model.PageNumber < this.Model.PagesCount)
+                {
+                    <li class="page-item"><a class="page-link" asp-controller="Property" asp-action="AllHomes" asp-route-id="@this.Model.NextPage" asp-route-type="@this.Model.Title">@this.Model.NextPage</a></li>
+                }
+                <li class="page-item @if (!Model.HasNextPage)
+            { <text>disabled</text> }">
+                    <a class="page-link" asp-action="All" asp-route-id="@this.Model.NextPage" asp-route-type="@this.Model.Title">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+}
 <style>
     .card-img-top {
         height: 250px;

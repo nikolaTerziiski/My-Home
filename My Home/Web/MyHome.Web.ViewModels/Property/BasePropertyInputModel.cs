@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-
-namespace MyHome.Web.ViewModels.Property
+﻿namespace MyHome.Web.ViewModels.Property
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Text;
+
+    using Microsoft.AspNetCore.Http;
+
     public abstract class BasePropertyInputModel
     {
         [Required]

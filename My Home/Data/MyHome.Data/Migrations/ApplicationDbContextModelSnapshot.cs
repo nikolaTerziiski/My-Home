@@ -442,6 +442,51 @@ namespace MyHome.Data.Migrations
                     b.ToTable("Images");
                 });
 
+            modelBuilder.Entity("MyHome.Data.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("AddedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("AddedByUserId1")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("HomeId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Likes")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AddedByUserId1");
+
+                    b.HasIndex("HomeId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Reviews");
+                });
+
             modelBuilder.Entity("MyHome.Data.Models.Setting", b =>
                 {
                     b.Property<int>("Id")
@@ -624,6 +669,23 @@ namespace MyHome.Data.Migrations
                     b.Navigation("Property");
                 });
 
+            modelBuilder.Entity("MyHome.Data.Models.Review", b =>
+                {
+                    b.HasOne("MyHome.Data.Models.ApplicationUser", "AddedByUser")
+                        .WithMany()
+                        .HasForeignKey("AddedByUserId1");
+
+                    b.HasOne("MyHome.Data.Models.Home", "Home")
+                        .WithMany("Reviews")
+                        .HasForeignKey("HomeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("AddedByUser");
+
+                    b.Navigation("Home");
+                });
+
             modelBuilder.Entity("MyHome.Data.Models.ApplicationUser", b =>
                 {
                     b.Navigation("Claims");
@@ -648,6 +710,8 @@ namespace MyHome.Data.Migrations
                     b.Navigation("FavouriteHomes");
 
                     b.Navigation("Images");
+
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("MyHome.Data.Models.Town", b =>

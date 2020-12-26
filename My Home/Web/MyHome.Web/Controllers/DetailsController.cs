@@ -33,7 +33,6 @@ namespace MyHome.Web.Controllers
         public async Task<IActionResult> Property(int id)
         {
             var baseProperty = this.propertyService.TakeById<DetailsPropertyViewModel>(id);
-
             foreach (var image in baseProperty.Images)
             {
                 var txt = $"/localImages/homes/{image.Id}.{image.Extension}";
@@ -44,8 +43,6 @@ namespace MyHome.Web.Controllers
             var user = await this.userManager.GetUserAsync(this.User);
             bool isHisPost = user.Id == baseProperty.AddedByUser.Id;
             this.ViewData["flag"] = isHisPost;
-
-            baseProperty.IsItFavourite = this.favouriteService.DoesContain(id, user.Id);
 
             return this.View(baseProperty);
         }

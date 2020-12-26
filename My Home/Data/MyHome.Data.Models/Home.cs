@@ -14,6 +14,7 @@
             this.Images = new HashSet<Image>();
             this.UploadDate = DateTime.UtcNow;
             this.FavouriteHomes = new HashSet<FavouriteHome>();
+            this.Reviews = new HashSet<Review>();
         }
 
         public string Title { get; set; }
@@ -51,5 +52,7 @@
         public virtual Category Category { get; set; }
 
         public ICollection<Image> Images { get; set; }
+
+        public ICollection<Review> Reviews { get; set; }
     }
 }

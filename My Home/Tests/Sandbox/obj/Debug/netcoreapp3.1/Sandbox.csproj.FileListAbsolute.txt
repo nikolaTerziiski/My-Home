@@ -91,3 +91,9 @@ C:\Users\Lenovo\Desktop\My hHome\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.c
 C:\Users\Lenovo\Desktop\My hHome\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.dll
 C:\Users\Lenovo\Desktop\My hHome\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.pdb
 C:\Users\Lenovo\Desktop\My hHome\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.genruntimeconfig.cache
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.dll
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.pdb
