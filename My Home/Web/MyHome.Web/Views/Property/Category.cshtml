@@ -1,8 +1,7 @@
 ﻿@model MyHome.Web.ViewModels.Property.PropertiesListViewModel
 
-<div class="row" style="justify-content:center">
-    <div>
-        <div class="row">
+<div class="row">
+        <div class="row" style="justify-content:center">
             @foreach (var list in this.Model.Properties)
             {
                 <div class="card col-md-5">
@@ -30,7 +29,6 @@
             }
 
         </div>
-    </div>
 </div>
 <div class="row col-sm-12" style="justify-content:center;">
     <nav aria-label="Homes pagination" style="col-sm-6">

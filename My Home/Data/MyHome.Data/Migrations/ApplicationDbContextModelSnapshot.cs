@@ -19,21 +19,6 @@ namespace MyHome.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
-            modelBuilder.Entity("FavouriteHome", b =>
-                {
-                    b.Property<int>("FavouritesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("HomesId")
-                        .HasColumnType("int");
-
-                    b.HasKey("FavouritesId", "HomesId");
-
-                    b.HasIndex("HomesId");
-
-                    b.ToTable("FavouriteHome");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -318,6 +303,42 @@ namespace MyHome.Data.Migrations
                     b.ToTable("Favourite");
                 });
 
+            modelBuilder.Entity("MyHome.Data.Models.FavouriteHome", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FavouriteId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HomeId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FavouriteId");
+
+                    b.HasIndex("HomeId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("FavouriteHomes");
+                });
+
             modelBuilder.Entity("MyHome.Data.Models.Home", b =>
                 {
                     b.Property<int>("Id")
@@ -482,21 +503,6 @@ namespace MyHome.Data.Migrations
                     b.ToTable("Towns");
                 });
 
-            modelBuilder.Entity("FavouriteHome", b =>
-                {
-                    b.HasOne("MyHome.Data.Models.Favourite", null)
-                        .WithMany()
-                        .HasForeignKey("FavouritesId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("MyHome.Data.Models.Home", null)
-                        .WithMany()
-                        .HasForeignKey("HomesId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("MyHome.Data.Models.ApplicationRole", null)
@@ -557,6 +563,25 @@ namespace MyHome.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("MyHome.Data.Models.FavouriteHome", b =>
+                {
+                    b.HasOne("MyHome.Data.Models.Favourite", "Favourite")
+                        .WithMany("FavouriteHomes")
+                        .HasForeignKey("FavouriteId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("MyHome.Data.Models.Home", "Home")
+                        .WithMany("FavouriteHomes")
+                        .HasForeignKey("HomeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Favourite");
+
+                    b.Navigation("Home");
+                });
+
             modelBuilder.Entity("MyHome.Data.Models.Home", b =>
                 {
                     b.HasOne("MyHome.Data.Models.ApplicationUser", "AddedByUser")
@@ -613,8 +638,15 @@ namespace MyHome.Data.Migrations
                     b.Navigation("Homes");
                 });
 
+            modelBuilder.Entity("MyHome.Data.Models.Favourite", b =>
+                {
+                    b.Navigation("FavouriteHomes");
+                });
+
             modelBuilder.Entity("MyHome.Data.Models.Home", b =>
                 {
+                    b.Navigation("FavouriteHomes");
+
                     b.Navigation("Images");
                 });
 

@@ -9,13 +9,13 @@ namespace MyHome.Data.Models
     {
         public Favourite()
         {
-            this.Homes = new HashSet<Home>();
+            this.FavouriteHomes = new HashSet<FavouriteHome>();
         }
 
         public string UserId { get; set; }
 
         public ApplicationUser User { get; set; }
 
-        public ICollection<Home> Homes { get; set; }
+        public ICollection<FavouriteHome> FavouriteHomes { get; set; }
     }
 }

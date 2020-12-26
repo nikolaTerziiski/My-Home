@@ -511,7 +511,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",

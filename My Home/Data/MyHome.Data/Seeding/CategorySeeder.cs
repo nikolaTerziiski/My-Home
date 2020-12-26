@@ -19,7 +19,7 @@
 
             await dbContext.Categories.AddAsync(new Category { Name = "Apartment" });
             await dbContext.Categories.AddAsync(new Category { Name = "House" });
-            await dbContext.Categories.AddAsync(new Category { Name = "Rent" });
+            await dbContext.Categories.AddAsync(new Category { Name = "Garage" });
         }
     }
 }

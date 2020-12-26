@@ -10,8 +10,8 @@ using MyHome.Data;
 namespace MyHome.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201221170155_Favourites")]
-    partial class Favourites
+    [Migration("20201226142735_ManyTOMany")]
+    partial class ManyTOMany
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -284,6 +284,12 @@ namespace MyHome.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
@@ -292,9 +298,47 @@ namespace MyHome.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("IsDeleted");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("Favourite");
+                });
+
+            modelBuilder.Entity("MyHome.Data.Models.FavouriteHome", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FavouriteId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HomeId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FavouriteId");
+
+                    b.HasIndex("HomeId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("FavouriteHomes");
                 });
 
             modelBuilder.Entity("MyHome.Data.Models.Home", b =>
@@ -321,9 +365,6 @@ namespace MyHome.Data.Migrations
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("FavouriteId")
-                        .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -363,8 +404,6 @@ namespace MyHome.Data.Migrations
                     b.HasIndex("AddedByUserId");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("FavouriteId");
 
                     b.HasIndex("IsDeleted");
 
@@ -526,6 +565,25 @@ namespace MyHome.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("MyHome.Data.Models.FavouriteHome", b =>
+                {
+                    b.HasOne("MyHome.Data.Models.Favourite", "Favourite")
+                        .WithMany("FavouriteHomes")
+                        .HasForeignKey("FavouriteId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("MyHome.Data.Models.Home", "Home")
+                        .WithMany("FavouriteHomes")
+                        .HasForeignKey("HomeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Favourite");
+
+                    b.Navigation("Home");
+                });
+
             modelBuilder.Entity("MyHome.Data.Models.Home", b =>
                 {
                     b.HasOne("MyHome.Data.Models.ApplicationUser", "AddedByUser")
@@ -537,10 +595,6 @@ namespace MyHome.Data.Migrations
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("MyHome.Data.Models.Favourite", null)
-                        .WithMany("Homes")
-                        .HasForeignKey("FavouriteId");
 
                     b.HasOne("MyHome.Data.Models.Town", "Town")
                         .WithMany("Homes")
@@ -588,11 +642,13 @@ namespace MyHome.Data.Migrations
 
             modelBuilder.Entity("MyHome.Data.Models.Favourite", b =>
                 {
-                    b.Navigation("Homes");
+                    b.Navigation("FavouriteHomes");
                 });
 
             modelBuilder.Entity("MyHome.Data.Models.Home", b =>
                 {
+                    b.Navigation("FavouriteHomes");
+
                     b.Navigation("Images");
                 });
 

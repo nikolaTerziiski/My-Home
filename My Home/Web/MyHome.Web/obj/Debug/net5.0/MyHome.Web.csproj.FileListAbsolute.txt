@@ -958,3 +958,4 @@ C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Deb
 C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\ref\MyHome.Web.dll
 C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\MyHome.Web.pdb
 C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\MyHome.Web.genruntimeconfig.cache
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Favourite\All.cshtml.g.cs

@@ -1,0 +1,52 @@
+﻿@model MyHome.Web.ViewModels.Favourite.FavouriteList
+
+    <div class="row" style="justify-content:center; margin-bottom: 15px; font-size:50px">
+            <span style="color:purple">My favourite list</span>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Price</th>
+                <th scope="col">Category</th>
+                <th scope="col">Actions</th>
+                <th scope="col">Status</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @{ var counter = 1;
+                @foreach (var home in this.Model.List)
+                {
+            <tr>
+                <th scope="row">@counter</th>
+                <td>@home.Title</td>
+                <td>@home.Price</td>
+                <td>@home.Category.Name</td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="Details" asp-action="Property" asp-route-id="@home.Id" style="margin-right:10px">
+                        Details
+                    </a>
+                    <a class="btn btn-danger" asp-controller="Favourite" asp-action="Remove" asp-route-id="@home.Id">
+                        Remove
+                    </a>
+                </td>
+
+                <td>
+                    @if (home.HomeStatus.ToString() == "ToRent")
+                    {
+                        <span style="color:green">For sale</span>
+                    }
+                    else
+                    {
+                        <span style="color:blue">For rent</span>
+                    }
+                </td>
+            </tr>
+                    counter++;
+              
+                }
+            }
+        </tbody>
+    </table>

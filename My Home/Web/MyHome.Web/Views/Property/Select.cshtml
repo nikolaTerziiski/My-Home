@@ -1,53 +1,52 @@
 ﻿@model MyHome.Web.ViewModels.Property.SelectCategoriesViewModel
+    <div style="justify-content:space-between">
+        <h1 style="margin-left:400px; margin-bottom:75px">Select category:</h1>
+        <hr />
+        <div class="col-md-12">
+            <div class="row" style="justify-content:space-between; margin-left:50px">
+                @*@foreach (var category in this.Model.Categories)
+                    {
+                        <div class="card col-md-3">
+                            <img class="card-img-top" src="@category.ImageURL" alt="Card image cap">
+                            <div class="card-body" style="justify-content:center">
+                                <h5 class="card-title">@category.Name</h5>
+                            </div>
 
-<div class="row" style="justify-content:space-between">
-    <h1 style="margin-left:400px">Select category:</h1>
-    <div class="col-md-9" style="margin-left:100px; margin-top:100px">
-        <div class="row" style="justify-content:space-between; margin-left:50px">
-            @*@foreach (var category in this.Model.Categories)
-                {
-                    <div class="card col-md-3">
-                        <img class="card-img-top" src="@category.ImageURL" alt="Card image cap">
-                        <div class="card-body" style="justify-content:center">
-                            <h5 class="card-title">@category.Name</h5>
                         </div>
+                    }*@
+                <div class="card col-md-3">
+                    <a asp-controller="Property" asp-action="Category" asp-route-id="1" asp-route-type="apartment">
 
-                    </div>
-                }*@
-            <div class="card col-md-4">
-                <a asp-controller="Property" asp-action="Category" asp-route-id="1" asp-route-type="apartment">
+                        <img class="card-img-top" src="~/localImages/categorySearch/1.jpg" alt="Card image cap">
+                        <div class="card-body" style="justify-content:center">
+                            <h5 class="card-title">Apartments</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="card col-md-3">
+                    <a asp-controller="Property" asp-action="Category" asp-route-id="1" asp-route-type="house">
 
-                    <img class="card-img-top" src="~/localImages/categorySearch/1.jpg" alt="Card image cap">
-                    <div class="card-body" style="justify-content:center">
-                        <h5 class="card-title">Apartments</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="card col-md-4">
-                <a asp-controller="Property" asp-action="Category" asp-route-id="1" asp-route-type="house">
+                        <img class="card-img-top" src="~/localImages/categorySearch/2.jpg" alt="Card image cap">
+                        <div class="card-body" style="justify-content:center">
+                            <h5 class="card-title">Houses</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="card col-md-3">
+                    <a asp-controller="Property" asp-action="Category" asp-route-id="1" asp-route-type="garage">
 
-                    <img class="card-img-top" src="~/localImages/categorySearch/2.jpg" alt="Card image cap">
-                    <div class="card-body" style="justify-content:center">
-                        <h5 class="card-title">Houses</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="card col-md-4">
-                <a asp-controller="Property" asp-action="Category" asp-route-id="1" asp-route-type="garage">
-
-                    <img class="card-img-top" src="~/localImages/categorySearch/3.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3 class="card-title">Garages</h3>
-                    </div>
-                </a>
+                        <img class="card-img-top" src="~/localImages/categorySearch/3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Garages</h5>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<style>
-    img {
-        width: 50px;
-        height: 100px;
-    }
-</style>
+    <style>
+        img {
+            width: 100px;
+            height: 200px;
+        }
+    </style>

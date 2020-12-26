@@ -1,9 +1,10 @@
 ﻿namespace MyHome.Services.Data
 {
-    using MyHome.Web.ViewModels.Property;
     using System;
     using System.Collections.Generic;
     using System.Text;
+
+    using MyHome.Web.ViewModels.Property;
 
     public interface ICategoryService
     {

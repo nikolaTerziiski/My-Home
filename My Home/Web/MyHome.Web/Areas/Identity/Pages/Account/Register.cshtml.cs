@@ -92,7 +92,16 @@ namespace MyHome.Web.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(user, GlobalConstants.GuestRoleName);
+                    var ff = this._userManager.Users.Count();
+                    if (this._userManager.Users.Count() == 1)
+                    {
+                        await _userManager.AddToRoleAsync(user, GlobalConstants.AdministratorRoleName);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, GlobalConstants.GuestRoleName);
+                    }
+
                     await this.favouriteRepository.AddAsync(new Favourite { User = user });
                     await this.favouriteRepository.SaveChangesAsync();
                     _logger.LogInformation("User created a new account with password.");

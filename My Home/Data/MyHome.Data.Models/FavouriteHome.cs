@@ -6,7 +6,7 @@
 
     using MyHome.Data.Common.Models;
 
-    public class FavouriteHome : BaseModel<int>
+    public class FavouriteHome : BaseDeletableModel<int>
     {
         public int FavouriteId { get; set; }
 

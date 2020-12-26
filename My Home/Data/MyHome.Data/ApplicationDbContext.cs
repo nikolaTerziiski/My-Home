@@ -37,7 +37,7 @@
 
         public DbSet<Setting> Settings { get; set; }
 
-        public DbSet<FavouriteHome> FavouriteHome { get; set; }
+        public DbSet<FavouriteHome> FavouriteHomes { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 
