@@ -6,6 +6,11 @@
 
     public class SelectCategoriesViewModel
     {
+        public SelectCategoriesViewModel()
+        {
+            this.Categories = new HashSet<SelectCategoryViewModel>();
+        }
+
         public IEnumerable<SelectCategoryViewModel> Categories { get; set; }
     }
 }

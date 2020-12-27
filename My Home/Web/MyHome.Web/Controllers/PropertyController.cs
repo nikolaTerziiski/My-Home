@@ -40,7 +40,7 @@
         }
 
         [HttpGet]
-        [Authorize(Roles = "Administrator")]
+        [Authorize]
         public IActionResult Create()
         {
             var viewModel = new CreateHomeInputModel();
@@ -105,13 +105,8 @@
             {
                 Categories = this.categoryService.GetSelectCategories(),
             };
-            foreach (var category in viewModel.Categories)
-            {
-                string txt = $"/localImages/categorySearch/{category.Id}.jpg";
-                category.ImageURL = txt;
-            }
 
-            return this.View();
+            return this.View(viewModel);
         }
 
         [HttpGet]

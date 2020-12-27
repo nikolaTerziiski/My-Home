@@ -1,52 +1,38 @@
 ﻿@model MyHome.Web.ViewModels.Property.SelectCategoriesViewModel
-    <div style="justify-content:space-between">
-        <h1 style="margin-left:400px; margin-bottom:75px">Select category:</h1>
-        <hr />
-        <div class="col-md-12">
-            <div class="row" style="justify-content:space-between; margin-left:50px">
-                @*@foreach (var category in this.Model.Categories)
-                    {
-                        <div class="card col-md-3">
-                            <img class="card-img-top" src="@category.ImageURL" alt="Card image cap">
-                            <div class="card-body" style="justify-content:center">
-                                <h5 class="card-title">@category.Name</h5>
-                            </div>
-
-                        </div>
-                    }*@
-                <div class="card col-md-3">
-                    <a asp-controller="Property" asp-action="Category" asp-route-id="1" asp-route-type="apartment">
-
-                        <img class="card-img-top" src="~/localImages/categorySearch/1.jpg" alt="Card image cap">
+<div style="justify-content:space-between">
+    <h1 style="margin-left:400px; margin-bottom:75px">Select category:</h1>
+    <hr />
+    <div class="form-group">
+        <div class="row" style="justify-content:space-between; margin-left:50px">
+            @foreach (var category in this.Model.Categories)
+            {
+                var ext = category.Id + ".jpg";
+                <div class="card col-md-4">
+                    <a asp-controller="Property" asp-action="Category" asp-route-id="1" asp-route-type="@category.Name">
+                        <img class="card-img-top" src="~/localImages/categorySearch/@ext" alt="Card image cap">
                         <div class="card-body" style="justify-content:center">
-                            <h5 class="card-title">Apartments</h5>
+                            <h5 class="card-title">@category.Name</h5>
                         </div>
                     </a>
                 </div>
-                <div class="card col-md-3">
-                    <a asp-controller="Property" asp-action="Category" asp-route-id="1" asp-route-type="house">
-
-                        <img class="card-img-top" src="~/localImages/categorySearch/2.jpg" alt="Card image cap">
+            }
+            @if (this.User.IsInRole("Administrator"))
+            {
+                <div class="card col-md-4" style="float:left">
+                    <a asp-controller="Categories" asp-action="Add">
+                        <img class="card-img-top" src="~/localImages/categorySearch/add.png" alt="Card image cap">
                         <div class="card-body" style="justify-content:center">
-                            <h5 class="card-title">Houses</h5>
+                            <h5 class="card-title">Add Category</h5>
                         </div>
                     </a>
                 </div>
-                <div class="card col-md-3">
-                    <a asp-controller="Property" asp-action="Category" asp-route-id="1" asp-route-type="garage">
-
-                        <img class="card-img-top" src="~/localImages/categorySearch/3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Garages</h5>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            }
         </div>
     </div>
-    <style>
-        img {
-            width: 100px;
-            height: 200px;
-        }
-    </style>
+</div>
+<style>
+    img {
+        width: 100px;
+        height: 200px;
+    }
+</style>

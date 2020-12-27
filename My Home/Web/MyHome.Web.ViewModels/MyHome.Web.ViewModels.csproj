@@ -24,8 +24,4 @@
     <ProjectReference Include="..\..\Services\MyHome.Services.Mapping\MyHome.Services.Mapping.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Category\" />
-  </ItemGroup>
-
 </Project>

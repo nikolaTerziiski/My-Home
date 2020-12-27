@@ -77,6 +77,7 @@
             {
                 return false;
             }
+
             return true;
         }
 
@@ -141,6 +142,11 @@
             home.TownId = inputModel.TownId;
 
             await this.propertyRepository.SaveChangesAsync();
+        }
+
+        public int GetAllByUser(string userId)
+        {
+            return this.propertyRepository.AllAsNoTracking().Where(x => x.AddedByUserId == userId).ToList().Count();
         }
     }
 }

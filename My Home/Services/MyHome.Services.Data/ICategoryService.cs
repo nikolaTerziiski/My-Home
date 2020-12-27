@@ -3,7 +3,9 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using System.Threading.Tasks;
 
+    using MyHome.Web.ViewModels.Categories;
     using MyHome.Web.ViewModels.Property;
 
     public interface ICategoryService
@@ -13,5 +15,6 @@
         IEnumerable<SelectCategoryViewModel> GetSelectCategories();
 
         public bool DoesContainsCategory(string type);
+        public Task CreateAsync(CreateCategoryInputModel inputModel, string path);
     }
 }

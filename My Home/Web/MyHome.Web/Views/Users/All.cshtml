@@ -1,0 +1,46 @@
+﻿@model MyHome.Web.ViewModels.Users.UsersListViewModel
+
+<div class="row" style="justify-content:center">
+    <span style="color: purple">
+        <h3>All users</h3>
+    </span>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Homes Created</th>
+            <th scope="col">Role</th>
+            <th scope="col"></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{ var counter = 1;
+            @foreach (var user in this.Model.Users)
+            {
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>@user.Name</td>
+                    <td>@user.HomesCount</td>
+                    <td>@user.Role</td>
+                    <td>
+                        @if (user.Role == "User")
+                        {
+                            <a class="btn btn-primary" asp-controller="Details" asp-action="Users" asp-route-id="@user.Id">
+                                Details
+                            </a>
+                        }
+                        else if (user.Id == this.Model.CurrentUserId)
+                        {
+                            <div>You</div>   
+                        }
+                    </td>
+                </tr>
+                counter++;
+            }
+        }
+    </tbody>
+</table>

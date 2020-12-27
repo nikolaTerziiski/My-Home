@@ -1,10 +1,11 @@
 ﻿namespace MyHome.Services.Data
 {
-    using MyHome.Web.ViewModels.Favourite;
     using System;
     using System.Collections.Generic;
     using System.Text;
     using System.Threading.Tasks;
+
+    using MyHome.Web.ViewModels.Favourite;
 
     public interface IFavouriteService
     {

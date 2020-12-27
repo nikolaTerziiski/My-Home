@@ -1,11 +1,12 @@
-﻿using MyHome.Data.Models;
-using MyHome.Services.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MyHome.Web.ViewModels.Property
+﻿namespace MyHome.Web.ViewModels.Property
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    using MyHome.Data.Models;
+    using MyHome.Services.Mapping;
+
     public class SelectCategoryViewModel : IMapFrom<Category>
     {
         public int Id { get; set; }

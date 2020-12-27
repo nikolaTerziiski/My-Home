@@ -1,16 +1,17 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using MyHome.Data.Models;
-using MyHome.Services.Data;
-using MyHome.Web.ViewModels.Property;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace MyHome.Web.Controllers
+﻿namespace MyHome.Web.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using MyHome.Data.Models;
+    using MyHome.Services.Data;
+    using MyHome.Web.ViewModels.Property;
+
     public class DetailsController : Controller
     {
 
@@ -47,6 +48,10 @@ namespace MyHome.Web.Controllers
             return this.View(baseProperty);
         }
 
-        //Adding profile details
+        public IActionResult Users(string id)
+        {
+
+            return this.View();
+        }
     }
 }

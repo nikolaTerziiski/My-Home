@@ -1,11 +1,12 @@
-﻿using MyHome.Data.Models;
-using MyHome.Services.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MyHome.Web.ViewModels.Favourite
+﻿namespace MyHome.Web.ViewModels.Favourite
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    using MyHome.Data.Models;
+    using MyHome.Services.Mapping;
+
     public class FavouriteInList : IMapFrom<Home>
     {
 

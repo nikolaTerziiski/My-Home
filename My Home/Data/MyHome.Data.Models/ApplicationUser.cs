@@ -18,10 +18,6 @@ namespace MyHome.Data.Models
             this.Logins = new HashSet<IdentityUserLogin<string>>();
         }
 
-        public int ImageId { get; set; }
-
-        public Image Image { get; set; }
-
         // Audit info
         public DateTime CreatedOn { get; set; }
 

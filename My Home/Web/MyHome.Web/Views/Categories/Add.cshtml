@@ -1,0 +1,23 @@
+﻿@model MyHome.Web.ViewModels.Categories.CreateCategoryInputModel
+
+<div class="row" style="justify-content:center; font-size:40px">
+    <span style="color:brown">Add Category</span>
+</div>
+    <hr />
+
+<div class="col-sm-6 offset-3">
+    <form method="post" asp-controller="Categories" asp-action="Add" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="@this.Model.Name" required="required">Email address</label>
+            <input type="text" asp-for="@this.Model.Name" class="form-control" placeholder="Enter category name">
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="Image"></label>
+            <input asp-for="Image" type="file" class="form-control"/>
+        </div>
+        <hr>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <hr />
+    </form>
+</div>

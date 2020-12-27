@@ -2,21 +2,49 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using System.Text;
+    using System.Threading.Tasks;
 
-    using MyHome.Data.Models;
     using MyHome.Data.Common.Repositories;
-    using MyHome.Web.ViewModels.Property;
+    using MyHome.Data.Models;
     using MyHome.Services.Mapping;
+    using MyHome.Web.ViewModels.Categories;
+    using MyHome.Web.ViewModels.Property;
 
     public class CategoryService : ICategoryService
     {
+        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif" };
         private readonly IDeletableEntityRepository<Category> categoryRepository;
 
         public CategoryService(IDeletableEntityRepository<Category> categoryRepository)
         {
             this.categoryRepository = categoryRepository;
+        }
+
+        public async Task CreateAsync(CreateCategoryInputModel inputModel, string path)
+        {
+            var newCategory = new Category
+            {
+                Name = inputModel.Name,
+            };
+
+            await this.categoryRepository.AddAsync(newCategory);
+            await this.categoryRepository.SaveChangesAsync();
+            Directory.CreateDirectory($"{path}/categorySearch");
+
+            var extension = Path.GetExtension(inputModel.Image.FileName).TrimStart('.');
+
+            if (!this.allowedExtensions.Any(x => x == extension))
+            {
+                throw new Exception("Invalid picture extenstion!");
+            }
+
+            var realPath = $"{path}/categorySearch/{newCategory.Id}.{extension}";
+            using Stream fileStream = new FileStream(realPath, FileMode.Create);
+            await inputModel.Image.CopyToAsync(fileStream);
+
         }
 
         public bool DoesContainsCategory(string type)
@@ -35,7 +63,7 @@
 
         public IEnumerable<SelectCategoryViewModel> GetSelectCategories()
         {
-            return this.categoryRepository.AllAsNoTracking().To<SelectCategoryViewModel>();
+            return this.categoryRepository.AllAsNoTracking().To<SelectCategoryViewModel>().ToList();
         }
     }
 }
