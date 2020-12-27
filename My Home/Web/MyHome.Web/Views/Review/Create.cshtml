@@ -1,0 +1,18 @@
+﻿@model MyHome.Web.ViewModels.Reviews.CreateReviewInputModel
+
+<div class="row" style="justify-content:center">
+    <span style="color: brown; font-size:40px">Create review for @this.Model.Title</span>
+</div>
+<hr />
+
+<form asp-controller="Review" asp-action="Create" class="col-sm-6 offset-3">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="@this.Model.Content" required="required">Description</label>
+        <textarea rows="5" type="text" asp-for="@this.Model.Content" class="form-control" placeholder="Enter review text"></textarea>
+    </div>
+    <div class="row" style="justify-content:center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <hr />
+</form>

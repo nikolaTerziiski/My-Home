@@ -8,6 +8,7 @@
     using AutoMapper;
     using MyHome.Data.Models;
     using MyHome.Services.Mapping;
+    using MyHome.Web.ViewModels.Reviews;
 
     public class DetailsPropertyViewModel : IMapFrom<Home>
     {
@@ -16,6 +17,7 @@
             this.Images = new HashSet<Image>();
             this.UploadDate = DateTime.UtcNow;
             this.ImageURLs = new List<string>();
+            this.Reviews = new HashSet<PropertyDetailsReviewViewModel>();
         }
 
         public int Id { get; set; }
@@ -46,6 +48,8 @@
         public ICollection<Image> Images { get; set; }
 
         public ICollection<string> ImageURLs { get; set; }
+
+        public ICollection<PropertyDetailsReviewViewModel> Reviews { get; set; }
 
     }
 }

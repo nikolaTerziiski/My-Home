@@ -10,8 +10,8 @@ using MyHome.Data;
 namespace MyHome.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201226174655_Reviews")]
-    partial class Reviews
+    [Migration("20201227140028_Review")]
+    partial class Review
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -99,7 +99,12 @@ namespace MyHome.Data.Migrations
                     b.Property<string>("RoleId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("ApplicationUserId");
 
                     b.HasIndex("RoleId");
 
@@ -451,10 +456,7 @@ namespace MyHome.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("AddedByUserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("AddedByUserId1")
+                    b.Property<string>("AddedByUserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Content")
@@ -480,7 +482,7 @@ namespace MyHome.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddedByUserId1");
+                    b.HasIndex("AddedByUserId");
 
                     b.HasIndex("HomeId");
 
@@ -579,6 +581,10 @@ namespace MyHome.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
+                    b.HasOne("MyHome.Data.Models.ApplicationUser", null)
+                        .WithMany("Roles")
+                        .HasForeignKey("ApplicationUserId");
+
                     b.HasOne("MyHome.Data.Models.ApplicationRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
@@ -586,7 +592,7 @@ namespace MyHome.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("MyHome.Data.Models.ApplicationUser", null)
-                        .WithMany("Roles")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -675,7 +681,7 @@ namespace MyHome.Data.Migrations
                 {
                     b.HasOne("MyHome.Data.Models.ApplicationUser", "AddedByUser")
                         .WithMany()
-                        .HasForeignKey("AddedByUserId1");
+                        .HasForeignKey("AddedByUserId");
 
                     b.HasOne("MyHome.Data.Models.Home", "Home")
                         .WithMany("Reviews")

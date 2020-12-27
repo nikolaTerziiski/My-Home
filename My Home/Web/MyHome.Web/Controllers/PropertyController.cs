@@ -12,6 +12,7 @@
     using MyHome.Data.Models;
     using MyHome.Services.Data;
     using MyHome.Web.ViewModels.Property;
+    using MyHome.Web.ViewModels.Reviews;
 
     public class PropertyController : Controller
     {
@@ -21,13 +22,15 @@
         private readonly IPropertyService propertyService;
         private readonly IWebHostEnvironment environment;
         private readonly IFavouriteService favouriteService;
+        private readonly IReviewService reviewService;
 
         public PropertyController(ICategoryService categoryService,
                                   ITownService townService,
                                   UserManager<ApplicationUser> userManager,
                                   IPropertyService propertyService,
                                   IWebHostEnvironment environment,
-                                  IFavouriteService favouriteService)
+                                  IFavouriteService favouriteService,
+                                  IReviewService reviewService)
         {
             this.categoryService = categoryService;
             this.townService = townService;
@@ -35,6 +38,7 @@
             this.propertyService = propertyService;
             this.environment = environment;
             this.favouriteService = favouriteService;
+            this.reviewService = reviewService;
         }
 
         public IActionResult Index()
@@ -192,6 +196,7 @@
             this.ViewData["flag"] = isHisPost;
 
             baseProperty.IsItFavourite = this.favouriteService.DoesContain(id, user.Id);
+            baseProperty.Reviews = this.reviewService.TakeById<PropertyDetailsReviewViewModel>(id);
             return this.View(baseProperty);
         }
 

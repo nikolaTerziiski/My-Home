@@ -961,3 +961,8 @@ C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Deb
 C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Categories\Add.cshtml.g.cs
 C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Property\Details.cshtml.g.cs
 C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Property\Edit.cshtml.g.cs
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Create.cshtml.g.cs
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Review\Create.cshtml.g.cs
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs

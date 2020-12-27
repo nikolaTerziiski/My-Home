@@ -12,7 +12,7 @@
 
         public int Likes { get; set; }
 
-        public int AddedByUserId { get; set; }
+        public string AddedByUserId { get; set; }
 
         public ApplicationUser AddedByUser { get; set; }
 
