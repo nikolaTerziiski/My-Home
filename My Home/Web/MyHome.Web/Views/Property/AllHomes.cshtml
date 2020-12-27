@@ -21,7 +21,7 @@
                                 <span style="color:blue">For rent</span>
                             }
                         </p>
-                        <a style="margin-bottom: 5px" asp-controller="Details" asp-action="Property" asp-route-id="@list.Id" class="btn btn-primary">Details</a>
+                        <a style="margin-bottom: 5px" asp-controller="Property" asp-action="Details" asp-route-id="@list.Id" class="btn btn-primary">Details</a>
                         @if (this.User.IsInRole("Administrator"))
                         {
                             <a style="margin-bottom: 5px" asp-controller="Property" asp-action="Delete" asp-route-id="@list.Id" class="btn btn-danger">Delete</a>

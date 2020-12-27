@@ -20,18 +20,21 @@
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IPropertyService propertyService;
         private readonly IWebHostEnvironment environment;
+        private readonly IFavouriteService favouriteService;
 
         public PropertyController(ICategoryService categoryService,
                                   ITownService townService,
                                   UserManager<ApplicationUser> userManager,
                                   IPropertyService propertyService,
-                                  IWebHostEnvironment environment)
+                                  IWebHostEnvironment environment,
+                                  IFavouriteService favouriteService)
         {
             this.categoryService = categoryService;
             this.townService = townService;
             this.userManager = userManager;
             this.propertyService = propertyService;
             this.environment = environment;
+            this.favouriteService = favouriteService;
         }
 
         public IActionResult Index()
@@ -168,7 +171,48 @@
         {
             await this.propertyService.IncrementLikeAsync(id);
 
-            return this.RedirectToAction("Property", "Details", new { id = id });
+            return this.RedirectToAction("Details", "Property", new { id = id });
+        }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Details(int id)
+        {
+            var baseProperty = this.propertyService.TakeById<DetailsPropertyViewModel>(id);
+            foreach (var image in baseProperty.Images)
+            {
+                var txt = $"/localImages/homes/{image.Id}.{image.Extension}";
+                baseProperty.ImageURLs.Add(txt);
+            }
+
+            // Checking if this user created the home, so it can edit it
+            var user = await this.userManager.GetUserAsync(this.User);
+
+            bool isHisPost = user.Id == baseProperty.AddedByUser.Id;
+            this.ViewData["flag"] = isHisPost;
+
+            baseProperty.IsItFavourite = this.favouriteService.DoesContain(id, user.Id);
+            return this.View(baseProperty);
+        }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult Edit(int id)
+        {
+            var viewModel = this.propertyService.TakeById<EditHomeInputModel>(id);
+            viewModel.Categories = this.categoryService.GetAllCategories();
+            viewModel.Towns = this.townService.GetAllTowns();
+
+            return this.View(viewModel);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Edit(int id, EditHomeInputModel inputModel)
+        {
+            var user = await this.userManager.GetUserAsync(this.User);
+            await this.propertyService.UpdateAsync(id, inputModel);
+            return this.RedirectToAction("Details", "Property", new { id = id });
         }
     }
 }

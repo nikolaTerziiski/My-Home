@@ -40,7 +40,7 @@
 
             await this.favouriteService.AddAsync(id, user.Id);
 
-            return this.RedirectToAction("Property", "Details", new { id = id });
+            return this.RedirectToAction("Details", "Property", new { id = id });
         }
 
         [Authorize]

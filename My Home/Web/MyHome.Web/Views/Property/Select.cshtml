@@ -16,6 +16,14 @@
                     </a>
                 </div>
             }
+            <div class="card col-md-4">
+                <a asp-controller="Property" asp-action="AllHomes" asp-route-id="1">
+                    <img class="card-img-top" src="~/localImages/categorySearch/AllHomes_.png" alt="Card image cap">
+                    <div class="card-body" style="justify-content:center">
+                        <h5 class="card-title">All homes</h5>
+                    </div>
+                </a>
+            </div>
             @if (this.User.IsInRole("Administrator"))
             {
                 <div class="card col-md-4" style="float:left">

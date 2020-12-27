@@ -25,7 +25,7 @@
                 <td>@home.Price</td>
                 <td>@home.Category.Name</td>
                 <td>
-                    <a class="btn btn-primary" asp-controller="Details" asp-action="Property" asp-route-id="@home.Id" style="margin-right:10px">
+                    <a class="btn btn-primary" asp-controller="Property" asp-action="Details" asp-route-id="@home.Id" style="margin-right:10px">
                         Details
                     </a>
                     <a class="btn btn-danger" asp-controller="Favourite" asp-action="Remove" asp-route-id="@home.Id">

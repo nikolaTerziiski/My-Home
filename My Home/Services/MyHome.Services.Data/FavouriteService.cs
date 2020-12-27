@@ -35,6 +35,17 @@
             //Initialize
             var favourite = this.favouritesRepository.All().Where(x => x.UserId == userId).FirstOrDefault();
             var home = this.propertyRepository.All().Where(x => x.Id == id).FirstOrDefault();
+
+            if (this.favouriteHomeRepository.AllWithDeleted().Any(x => x.IsDeleted == true && x.HomeId == home.Id && x.FavouriteId == favourite.Id))
+            {
+                var deletedFavourite = this.favouriteHomeRepository.AllWithDeleted().Where(x => x.HomeId == home.Id && x.FavouriteId == favourite.Id).FirstOrDefault();
+
+                deletedFavourite.IsDeleted = false;
+                this.favouriteHomeRepository.Update(deletedFavourite);
+                await this.favouriteHomeRepository.SaveChangesAsync();
+                return;
+            }
+
             var favourteHome = new FavouriteHome { FavouriteId = favourite.Id, HomeId = id };
 
 

@@ -6,7 +6,7 @@
         @Model.Title
         @if ((bool)this.ViewData["Flag"] == true)
         {
-            <button asp-controller="Edit" asp-action="Property" asp-route-id="@this.Model.Id" type="button" class="btn btn-primary">Edit your offer</button>
+            <a asp-controller="Property" asp-action="Edit" asp-route-id="@this.Model.Id" type="button" class="btn btn-primary">Edit your offer</a>
         }
 
         <span style="color: saddlebrown; float:right; font-size:25px; margin-top:10px">Номер за връзка: @this.Model.AddedByUser.PhoneNumber</span>
@@ -62,10 +62,10 @@
                 }
                 else
                 {
-                    <a style="margin-left: 50px" type="submit" asp-controller="Favourite"  asp-action="Add" asp-route-id="@this.Model.Id" class="btn btn-success">Add to Favourite</a>
+                    <a style="margin-left: 50px" type="submit" asp-controller="Favourite" asp-action="Add" asp-route-id="@this.Model.Id" class="btn btn-success">Add to Favourite</a>
                 }
             </div>
-          </div>
+        </div>
         <div class="col-md-4">
             <h3 class="my-3">Детайли:</h3>
             <ul>
@@ -76,7 +76,7 @@
                 <li>Брой стаи: @Model.Rooms</li>
                 <li>Град: @Model.Town.Name</li>
                 <li>Държава: България</li>
-            </ul>   
+            </ul>
             <div style="color: #999999; margin-left: 20px">
                 Публикувана на @Model.UploadDate
             </div>
@@ -99,7 +99,7 @@
                         <div class="media-body ml-3">
                             Нещо
                             <div class="text-muted small">
-                                <time ></time>
+                                <time></time>
                             </div>
                         </div>
                         <div class="text-muted small ml-3">
