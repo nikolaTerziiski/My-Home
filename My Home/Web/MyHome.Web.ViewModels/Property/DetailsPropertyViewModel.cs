@@ -39,6 +39,8 @@
 
         public int Likes { get; set; }
 
+        public int Views { get; set; }
+
         public bool IsItFavourite { get; set; }
 
         public ApplicationUser AddedByUser { get; set; }

@@ -41,7 +41,7 @@
             viewModel.Users = this.userManager.Users.Select(x => new UserInListViewModel
             {
                 Id = x.Id,
-                HomesCount = this.propertyService.GetAllByUser(x.Id),
+                HomesCount = this.propertyService.GetAllByUserCount(x.Id),
                 Name = x.UserName,
                 Role = this.userManager.GetRolesAsync(x).Result.Last(),
             }).ToList();

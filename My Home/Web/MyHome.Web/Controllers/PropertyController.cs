@@ -153,7 +153,7 @@
                 return this.RedirectToAction("NotFound");
             }
 
-            var viewModel = this.propertyService.TakeById<DeleteHomeViewModel>(id);
+            var viewModel = this.propertyService.TakeOneById<DeleteHomeViewModel>(id);
             return this.View(viewModel);
         }
 
@@ -182,7 +182,7 @@
         [Authorize]
         public async Task<IActionResult> Details(int id)
         {
-            var baseProperty = this.propertyService.TakeById<DetailsPropertyViewModel>(id);
+            var baseProperty = this.propertyService.TakeOneById<DetailsPropertyViewModel>(id);
             foreach (var image in baseProperty.Images)
             {
                 var txt = $"/localImages/homes/{image.Id}.{image.Extension}";
@@ -197,6 +197,9 @@
 
             baseProperty.IsItFavourite = this.favouriteService.DoesContain(id, user.Id);
             baseProperty.Reviews = this.reviewService.TakeById<PropertyDetailsReviewViewModel>(id);
+
+            //Increment like after taking the info, so the current doesnt count
+            await this.propertyService.IncrementView(id);
             return this.View(baseProperty);
         }
 
@@ -204,7 +207,7 @@
         [Authorize]
         public IActionResult Edit(int id)
         {
-            var viewModel = this.propertyService.TakeById<EditHomeInputModel>(id);
+            var viewModel = this.propertyService.TakeOneById<EditHomeInputModel>(id);
             viewModel.Categories = this.categoryService.GetAllCategories();
             viewModel.Towns = this.townService.GetAllTowns();
 
@@ -218,6 +221,20 @@
             var user = await this.userManager.GetUserAsync(this.User);
             await this.propertyService.UpdateAsync(id, inputModel);
             return this.RedirectToAction("Details", "Property", new { id = id });
+        }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult My()
+        {
+
+            var userId = this.userManager.GetUserId(this.User);
+            var viewModel = new MyPropertiesViewModel() 
+            {
+                Properties = this.propertyService.TakeAllByUserId<MyPropertyViewModel>(userId),
+            };
+
+            return this.View(viewModel);
         }
     }
 }

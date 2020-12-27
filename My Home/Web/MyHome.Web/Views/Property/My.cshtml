@@ -1,0 +1,50 @@
+﻿@model MyHome.Web.ViewModels.Property.MyPropertiesViewModel
+
+<div class="row" style="justify-content:center; margin-bottom: 15px; font-size:50px">
+    <span style="color:purple">My favourite list</span>
+</div>
+@if (this.Model.Properties.Count() != 0)
+{
+    <table class="table table-striped" style="background-color:burlywood">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Price</th>
+                <th scope="col">Category</th>
+                <th scope="col">Numbers</th>
+                <th scope="col">Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @{ var counter = 1;
+                @foreach (var home in this.Model.Properties)
+                {
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@home.Title</td>
+                        <td>@home.Price</td>
+                        <td>@home.Category.Name</td>
+                        <td>Likes: @home.Likes - Views: @home.Views</td>
+                        <td>
+                            <a class="btn btn-primary" asp-controller="Property" asp-action="Details" asp-route-id="@home.Id" style="margin-right:10px">
+                                Details
+                            </a>
+                            <a class="btn btn-danger" asp-controller="Property" asp-action="Delete" asp-route-id="@home.Id">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                    counter++;
+
+                }
+            }
+        </tbody>
+    </table>
+
+}
+else
+{
+ <span style="color:red; font-size:70px">You don't have any homes</span>
+}

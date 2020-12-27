@@ -10,7 +10,11 @@
     {
         public Task CreateAsync(CreateHomeInputModel inputModel, string userId, string path);
 
-        public T TakeById<T>(int id);
+        public T TakeOneById<T>(int id);
+
+        public ICollection<T> TakeAllByUserId<T>(string userId);
+
+        public Task IncrementView(int id);
 
         public Task UpdateAsync(int id,  EditHomeInputModel inputModel);
 
@@ -28,6 +32,6 @@
 
         public Task IncrementLikeAsync(int id);
 
-        public int GetAllByUser(string userId);
+        public int GetAllByUserCount(string userId);
     }
 }

@@ -36,7 +36,7 @@
                 return this.NotFound();
             }
 
-            var viewModel = this.propertyService.TakeById<CreateReviewInputModel>(id);
+            var viewModel = this.propertyService.TakeOneById<CreateReviewInputModel>(id);
 
             return this.View(viewModel);
         }
@@ -47,7 +47,7 @@
         {
             if (!this.ModelState.IsValid)
             {
-                var viewModel = this.propertyService.TakeById<CreateReviewInputModel>(inputModel.Id);
+                var viewModel = this.propertyService.TakeOneById<CreateReviewInputModel>(inputModel.Id);
                 return this.View(viewModel);
             }
 

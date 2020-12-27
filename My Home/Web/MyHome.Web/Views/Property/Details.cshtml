@@ -8,7 +8,7 @@
         {
             <a asp-controller="Property" asp-action="Edit" asp-route-id="@this.Model.Id" type="button" class="btn btn-primary">Edit your offer</a>
         }
-
+        <span style="color:grey; font-size:15px">Total views: @this.Model.Views</span>
         <span style="color: saddlebrown; float:right; font-size:25px; margin-top:10px">Номер за връзка: @this.Model.AddedByUser.PhoneNumber</span>
     </h1>
 
@@ -64,6 +64,7 @@
                 {
                     <a style="margin-left: 50px" type="submit" asp-controller="Favourite" asp-action="Add" asp-route-id="@this.Model.Id" class="btn btn-success">Add to Favourite</a>
                 }
+                
             </div>
         </div>
         <div class="col-md-4">

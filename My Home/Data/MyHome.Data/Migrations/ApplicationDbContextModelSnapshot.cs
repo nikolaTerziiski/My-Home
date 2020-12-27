@@ -399,6 +399,9 @@ namespace MyHome.Data.Migrations
                     b.Property<DateTime>("UploadDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("Views")
+                        .HasColumnType("int");
+
                     b.Property<int>("YearOfProduction")
                         .HasColumnType("int");
 

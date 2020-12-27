@@ -37,6 +37,8 @@
 
         public int Likes { get; set; }
 
+        public int Views { get; set; }
+
         public int TownId { get; set; }
 
         public Town Town { get; set; }

@@ -115,16 +115,15 @@
             await this.propertyRepository.SaveChangesAsync();
         }
 
-        public T TakeById<T>(int id)
+        public T TakeOneById<T>(int id)
         {
             if (!this.propertyRepository.AllAsNoTracking().Any(x => x.Id == id))
             {
                 throw new InvalidOperationException("The property does not exist!");
             }
 
-            var propertyFromData = this.propertyRepository.AllAsNoTracking()
+            var propertyFromData = this.propertyRepository.All()
                 .Where(x => x.Id == id).To<T>().FirstOrDefault();
-
 
             return propertyFromData;
         }
@@ -144,9 +143,24 @@
             await this.propertyRepository.SaveChangesAsync();
         }
 
-        public int GetAllByUser(string userId)
+        public int GetAllByUserCount(string userId)
         {
             return this.propertyRepository.AllAsNoTracking().Where(x => x.AddedByUserId == userId).ToList().Count();
+        }
+
+        public async Task IncrementView(int id)
+        {
+            var home = this.propertyRepository.All().Where(x => x.Id == id).FirstOrDefault();
+            home.Views += 1;
+
+            await this.propertyRepository.SaveChangesAsync();
+        }
+
+        public ICollection<T> TakeAllByUserId<T>(string userId)
+        {
+            var homes = this.propertyRepository.AllAsNoTracking().Where(x => x.AddedByUserId == userId).To<T>().ToList();
+
+            return homes;
         }
     }
 }

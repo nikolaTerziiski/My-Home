@@ -966,3 +966,4 @@ C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Deb
 C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
 C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
 C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Web\MyHome.Web\obj\Debug\net5.0\Razor\Views\Property\My.cshtml.g.cs
