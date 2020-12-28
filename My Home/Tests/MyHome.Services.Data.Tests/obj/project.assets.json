@@ -8813,6 +8813,7 @@
       "Microsoft.NET.Test.Sdk >= 16.7.1",
       "Moq >= 4.14.7",
       "MyHome.Data >= 1.0.0",
+      "MyHome.Data.Models >= 1.0.0",
       "MyHome.Services.Data >= 1.0.0",
       "StyleCop.Analyzers >= 1.2.0-beta.205",
       "xunit >= 2.4.1",
@@ -8850,6 +8851,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj"
+            },
             "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data\\MyHome.Data.csproj": {
               "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data\\MyHome.Data.csproj"
             },

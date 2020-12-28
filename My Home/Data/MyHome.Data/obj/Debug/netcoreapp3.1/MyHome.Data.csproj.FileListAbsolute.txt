@@ -38,23 +38,3 @@ C:\Users\Lenovo\Desktop\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1
 C:\Users\Lenovo\Desktop\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1\MyHome.Data.dll
 C:\Users\Lenovo\Desktop\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1\MyHome.Data.pdb
 C:\Users\Lenovo\Desktop\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1\MyHome.Data.genruntimeconfig.cache
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\MyHome.Data.deps.json
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\MyHome.Data.runtimeconfig.json
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\MyHome.Data.runtimeconfig.dev.json
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\MyHome.Data.dll
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\MyHome.Data.pdb
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\MyHome.Common.dll
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\MyHome.Data.Common.dll
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\MyHome.Data.Models.dll
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\MyHome.Common.pdb
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\MyHome.Data.Common.pdb
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\bin\Debug\netcoreapp3.1\MyHome.Data.Models.pdb
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1\MyHome.Data.csprojAssemblyReference.cache
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1\MyHome.Data.AssemblyInfoInputs.cache
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1\MyHome.Data.AssemblyInfo.cs
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1\MyHome.Data.csproj.CoreCompileInputs.cache
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1\MyHome.Data.csproj.CopyComplete
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1\MyHome.Data.dll
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1\MyHome.Data.pdb
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Data\MyHome.Data\obj\Debug\netcoreapp3.1\MyHome.Data.genruntimeconfig.cache

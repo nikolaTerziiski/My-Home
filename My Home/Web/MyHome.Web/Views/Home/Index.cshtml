@@ -2,6 +2,9 @@
 @{
     this.ViewData["Title"] = "Home Page";
 }
+<div class="row" style="justify-content:center">
+    <span style="font-size:60px">Homes for Everyone</span>
+</div>
 <div class="text-center">
     <div id="carouselControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -25,14 +28,17 @@
         </a>
     </div>
 </div>
-
+<div class="row" style="justify-content:center">
+    <a class="btn btn-primary" asp-controller="Property" asp-action="AllHomes" asp-route-id="1" style="border-radius:15px; height:50px; width:150px">Get started</a>
+</div>
 <style>
-    .carousel{
-        margin-left : 250px;
-        max-width:60%;
-        height:500px
+    .carousel {
+        margin-left: 250px;
+        max-width: 60%;
+        height: 500px
     }
-    body{
-        background-color:bisque;
+
+    body {
+        background-color: powderblue;
     }
 </style>

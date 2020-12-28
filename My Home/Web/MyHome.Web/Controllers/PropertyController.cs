@@ -23,6 +23,8 @@
         private readonly IWebHostEnvironment environment;
         private readonly IFavouriteService favouriteService;
         private readonly IReviewService reviewService;
+        private readonly ILikesService likesService;
+        private readonly string[] roles = { "User", "Administrator" };
 
         public PropertyController(ICategoryService categoryService,
                                   ITownService townService,
@@ -30,7 +32,8 @@
                                   IPropertyService propertyService,
                                   IWebHostEnvironment environment,
                                   IFavouriteService favouriteService,
-                                  IReviewService reviewService)
+                                  IReviewService reviewService,
+                                  ILikesService likesService)
         {
             this.categoryService = categoryService;
             this.townService = townService;
@@ -39,6 +42,7 @@
             this.environment = environment;
             this.favouriteService = favouriteService;
             this.reviewService = reviewService;
+            this.likesService = likesService;
         }
 
         public IActionResult Index()
@@ -171,6 +175,7 @@
             return this.RedirectToAction("Index", "Home");
         }
 
+        [Authorize]
         public async Task<IActionResult> Increment(int id)
         {
             await this.propertyService.IncrementLikeAsync(id);
@@ -179,7 +184,6 @@
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> Details(int id)
         {
             var baseProperty = this.propertyService.TakeOneById<DetailsPropertyViewModel>(id);
@@ -192,10 +196,17 @@
             // Checking if this user created the home, so it can edit it
             var user = await this.userManager.GetUserAsync(this.User);
 
-            bool isHisPost = user.Id == baseProperty.AddedByUser.Id;
+            bool isHisPost = false;
+            // Checking if the user is logged in, so he cannot have chance to see EditPost
+            if (user != null)
+            {
+              baseProperty.IsItLiked = this.likesService.DoesContainUser(id, user.Id);
+              isHisPost = user.Id == baseProperty.AddedByUser.Id;
+              baseProperty.IsItFavourite = this.favouriteService.DoesContain(id, user.Id);
+            }
+
             this.ViewData["flag"] = isHisPost;
 
-            baseProperty.IsItFavourite = this.favouriteService.DoesContain(id, user.Id);
             baseProperty.Reviews = this.reviewService.TakeById<PropertyDetailsReviewViewModel>(id);
 
             //Increment like after taking the info, so the current doesnt count

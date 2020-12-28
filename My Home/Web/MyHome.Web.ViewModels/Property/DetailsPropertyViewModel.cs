@@ -18,6 +18,8 @@
             this.UploadDate = DateTime.UtcNow;
             this.ImageURLs = new List<string>();
             this.Reviews = new HashSet<PropertyDetailsReviewViewModel>();
+            this.Likes = new HashSet<Like>();
+
         }
 
         public int Id { get; set; }
@@ -37,11 +39,13 @@
 
         public Town Town { get; set; }
 
-        public int Likes { get; set; }
+        public int LikesCount => this.Likes.Count();
 
         public int Views { get; set; }
 
         public bool IsItFavourite { get; set; }
+
+        public bool IsItLiked { get; set; }
 
         public ApplicationUser AddedByUser { get; set; }
 
@@ -52,6 +56,8 @@
         public ICollection<string> ImageURLs { get; set; }
 
         public ICollection<PropertyDetailsReviewViewModel> Reviews { get; set; }
+        public ICollection<Like> Likes { get; set; }
+
 
     }
 }

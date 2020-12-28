@@ -58,6 +58,7 @@
             return this.RedirectToAction("Details", "Property", new { id = inputModel.Id });
         }
 
+        [Authorize]
         public IActionResult My()
         {
             var userId = this.userManager.GetUserId(this.User);

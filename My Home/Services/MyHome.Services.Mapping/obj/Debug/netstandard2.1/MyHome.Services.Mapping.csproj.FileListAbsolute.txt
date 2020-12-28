@@ -7,12 +7,3 @@ C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Mapping\obj\Debug\nets
 C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Mapping\obj\Debug\netstandard2.1\MyHome.Services.Mapping.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Mapping\obj\Debug\netstandard2.1\MyHome.Services.Mapping.dll
 C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Mapping\obj\Debug\netstandard2.1\MyHome.Services.Mapping.pdb
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Mapping\bin\Debug\netstandard2.1\MyHome.Services.Mapping.deps.json
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Mapping\bin\Debug\netstandard2.1\MyHome.Services.Mapping.dll
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Mapping\bin\Debug\netstandard2.1\MyHome.Services.Mapping.pdb
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Mapping\obj\Debug\netstandard2.1\MyHome.Services.Mapping.csprojAssemblyReference.cache
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Mapping\obj\Debug\netstandard2.1\MyHome.Services.Mapping.AssemblyInfoInputs.cache
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Mapping\obj\Debug\netstandard2.1\MyHome.Services.Mapping.AssemblyInfo.cs
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Mapping\obj\Debug\netstandard2.1\MyHome.Services.Mapping.csproj.CoreCompileInputs.cache
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Mapping\obj\Debug\netstandard2.1\MyHome.Services.Mapping.dll
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Mapping\obj\Debug\netstandard2.1\MyHome.Services.Mapping.pdb

@@ -25,6 +25,11 @@
 
         public async Task CreateAsync(CreateCategoryInputModel inputModel, string path)
         {
+            if (this.categoryRepository.AllAsNoTracking().Any(x => x.Name.ToLower() == inputModel.Name.ToLower()))
+            {
+                return;
+            }
+
             var newCategory = new Category
             {
                 Name = inputModel.Name,
@@ -59,6 +64,19 @@
         public IEnumerable<KeyValuePair<string, string>> GetAllCategories()
         {
             return this.categoryRepository.AllAsNoTracking().Select(x => new KeyValuePair<string, string>(x.Id.ToString(), x.Name)).ToList();
+        }
+
+        public ICollection<CategoryInListViewModel> GetCategoriesForList()
+        {
+            var categories = this.categoryRepository.AllAsNoTracking().Select(x => new CategoryInListViewModel()
+            {
+                Id = x.Id,
+                CreatedOn = x.CreatedOn,
+                Name = x.Name,
+                Count = x.Homes.Count,
+            }).ToList();
+
+            return categories;
         }
 
         public IEnumerable<SelectCategoryViewModel> GetSelectCategories()

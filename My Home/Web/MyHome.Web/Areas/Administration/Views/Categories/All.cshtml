@@ -1,0 +1,36 @@
+﻿@model MyHome.Web.ViewModels.Categories.CategoriesListViewModel
+
+<div class="row" style="justify-content:center; margin-bottom: 15px; font-size:50px">
+    <span style="color:purple">All Categories</span>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Homes</th>
+            <th scope="col">Created on</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{ var counter = 1;
+            @foreach (var category in this.Model.Categories)
+            {
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>@category.Name</td>
+                    <td>@category.Count</td>
+                    <td>@category.CreatedOn.ToString("d")</td>
+                    <td>
+                        <a class="btn btn-info" asp-area="" asp-controller="Property" asp-action="Category" asp-route-id="1" asp-route-type="@category.Name">Check homes</a>
+                        <a asp-area="Administration" asp-controller="Categories" asp-action="Remove" asp-route-id="@category.Id">Remove</a>
+                    </td>
+                </tr>
+                counter++;
+            }
+        }
+    </tbody>
+</table>

@@ -34,6 +34,7 @@
             return this.View();
         }
 
+        [Authorize]
         public async Task<IActionResult> Add(int id)
         {
             var user = await this.userManager.GetUserAsync(this.User);
@@ -52,6 +53,7 @@
             return this.View(list);
         }
 
+        [Authorize]
         public async Task<IActionResult> Remove(int id)
         {
             var user = await this.userManager.GetUserAsync(this.User);

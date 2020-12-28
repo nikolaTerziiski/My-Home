@@ -24,6 +24,7 @@
 
         public async Task CreateAsync(CreateHomeInputModel inputModel, string userId, string path)
         {
+
             var home = new Home
             {
                 Title = inputModel.Title,
@@ -38,27 +39,31 @@
                 Status = inputModel.HomeStatus,
                 Price = inputModel.Price,
             };
-            Directory.CreateDirectory($"{path}/homes");
 
-            foreach (var picture in inputModel.Images)
+            if (inputModel.Images.Count() > 0)
             {
-                var extension = Path.GetExtension(picture.FileName).TrimStart('.');
-                if (!this.allowedExtensions.Any(x => x == extension))
+                Directory.CreateDirectory($"{path}/homes");
+                foreach (var picture in inputModel.Images)
                 {
-                    throw new Exception("Invalid picture extenstion!");
+                    var extension = Path.GetExtension(picture.FileName).TrimStart('.');
+                    if (!this.allowedExtensions.Any(x => x == extension))
+                    {
+                        throw new Exception("Invalid picture extenstion!");
+                    }
+
+                    var dbImage = new Image
+                    {
+                        AddedByUserId = userId,
+                        Extension = extension,
+                    };
+                    home.Images.Add(dbImage);
+
+                    var realPath = $"{path}/homes/{dbImage.Id}.{extension}";
+                    using Stream fileStream = new FileStream(realPath, FileMode.Create);
+                    await picture.CopyToAsync(fileStream);
                 }
-
-                var dbImage = new Image
-                {
-                    AddedByUserId = userId,
-                    Extension = extension,
-                };
-                home.Images.Add(dbImage);
-
-                var realPath = $"{path}/homes/{dbImage.Id}.{extension}";
-                using Stream fileStream = new FileStream(realPath, FileMode.Create);
-                await picture.CopyToAsync(fileStream);
             }
+
 
             await this.propertyRepository.AddAsync(home);
             await this.propertyRepository.SaveChangesAsync();
@@ -109,17 +114,22 @@
 
         public async Task IncrementLikeAsync(int id)
         {
-            var home = this.propertyRepository.All().Where(x => x.Id == id).FirstOrDefault();
-            home.Likes += 1;
+            //var home = this.propertyRepository.All().Where(x => x.Id == id).FirstOrDefault();
+            //home.Likes += 1;
 
-            await this.propertyRepository.SaveChangesAsync();
+            //await this.propertyRepository.SaveChangesAsync();
         }
 
         public T TakeOneById<T>(int id)
         {
+            if (id <= 0)
+            {
+                throw new InvalidOperationException("Invalid id!");
+            }
+
             if (!this.propertyRepository.AllAsNoTracking().Any(x => x.Id == id))
             {
-                throw new InvalidOperationException("The property does not exist!");
+                throw new InvalidOperationException("The property with that id does not exists!");
             }
 
             var propertyFromData = this.propertyRepository.All()

@@ -21,49 +21,78 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Property" asp-action="Select">Search homes</a>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Homes
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Property" asp-action="Select">Search homes</a>
+                                    @if (this.User.Identity.IsAuthenticated)
+                                    {
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Property" asp-action="Create">Create Home</a>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Property" asp-action="AllHomes" asp-route-id="1">All homes</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Property" asp-action="My">My homes</a>
+                                    }
+                                </div>
+                            </div>
                         </li>
-                        @if (this.User.Identity.IsAuthenticated)
-
-                            @if (this.User.IsInRole("Administrator"))
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Add">Create Category</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="All"></a>
-                                </li>
-                            }
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Property" asp-action="Create">Create Home</a>
+                        @if (this.User.IsInRole("Administrator"))
+                        {
+                            <li class="nav-item" style="margin-left: 15px">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Categories
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="nav-link text-dark" asp-area="Administration" asp-controller="Categories" asp-action="Add">Create Category</a>
+                                        <a class="nav-link text-dark" asp-area="Administration" asp-controller="Categories" asp-action="All">All Categories</a>
+                                        <div class="dropdown-divider"></div>
+                                    </div>
+                                </div>
                             </li>
+                            <li class="nav-item" style="margin-left: 15px">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Users
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="All">All Users</a>
+                                        <div class="dropdown-divider"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                        @if (this.User.Identity.IsAuthenticated)
+                    	{
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-controller="Favourite" asp-action="All">My Favourite</a>
                             </li>
-                        </ul>
-                    </div>
+                    	}
+                    </ul>
                 </div>
-            </nav>
-        </header>
-
-        <div class="container">
-            <partial name="_CookieConsentPartial" />
-            <main role="main" class="pb-3">
-                @this.RenderBody()
-            </main>
-        </div>
-
-        <footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; @DateTime.Now.Year - @GlobalConstants.SystemName - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </div>
-        </footer>
+        </nav>
+    </header>
 
-        <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
-        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
-        <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-        @await this.RenderSectionAsync("Scripts", required: false)
-    </body>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @this.RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; @DateTime.Now.Year - @GlobalConstants.SystemName - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+    @await this.RenderSectionAsync("Scripts", required: false)
+</body>
 </html>

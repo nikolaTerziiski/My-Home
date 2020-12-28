@@ -15,6 +15,7 @@
             this.UploadDate = DateTime.UtcNow;
             this.FavouriteHomes = new HashSet<FavouriteHome>();
             this.Reviews = new HashSet<Review>();
+            this.Likes = new HashSet<Like>();
         }
 
         public string Title { get; set; }
@@ -35,8 +36,6 @@
 
         public int Sqauring { get; set; }
 
-        public int Likes { get; set; }
-
         public int Views { get; set; }
 
         public int TownId { get; set; }
@@ -56,5 +55,7 @@
         public ICollection<Image> Images { get; set; }
 
         public ICollection<Review> Reviews { get; set; }
+
+        public ICollection<Like> Likes { get; set; }
     }
 }

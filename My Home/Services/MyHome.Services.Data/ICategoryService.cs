@@ -15,6 +15,9 @@
         IEnumerable<SelectCategoryViewModel> GetSelectCategories();
 
         public bool DoesContainsCategory(string type);
+
         public Task CreateAsync(CreateCategoryInputModel inputModel, string path);
+
+        public ICollection<CategoryInListViewModel> GetCategoriesForList();
     }
 }

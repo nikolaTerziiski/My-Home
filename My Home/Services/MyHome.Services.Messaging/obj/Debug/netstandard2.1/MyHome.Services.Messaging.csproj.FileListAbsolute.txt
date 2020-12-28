@@ -7,12 +7,3 @@ C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Messaging\obj\Debug\ne
 C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Messaging\obj\Debug\netstandard2.1\MyHome.Services.Messaging.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Messaging\obj\Debug\netstandard2.1\MyHome.Services.Messaging.dll
 C:\Users\Lenovo\Desktop\My hHome\Services\MyHome.Services.Messaging\obj\Debug\netstandard2.1\MyHome.Services.Messaging.pdb
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Messaging\bin\Debug\netstandard2.1\MyHome.Services.Messaging.deps.json
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Messaging\bin\Debug\netstandard2.1\MyHome.Services.Messaging.dll
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Messaging\bin\Debug\netstandard2.1\MyHome.Services.Messaging.pdb
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Messaging\obj\Debug\netstandard2.1\MyHome.Services.Messaging.csprojAssemblyReference.cache
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Messaging\obj\Debug\netstandard2.1\MyHome.Services.Messaging.AssemblyInfoInputs.cache
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Messaging\obj\Debug\netstandard2.1\MyHome.Services.Messaging.AssemblyInfo.cs
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Messaging\obj\Debug\netstandard2.1\MyHome.Services.Messaging.csproj.CoreCompileInputs.cache
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Messaging\obj\Debug\netstandard2.1\MyHome.Services.Messaging.dll
-C:\Users\Lenovo\Desktop\ASP.NET Project 2\My-Home\My Home\Services\MyHome.Services.Messaging\obj\Debug\netstandard2.1\MyHome.Services.Messaging.pdb

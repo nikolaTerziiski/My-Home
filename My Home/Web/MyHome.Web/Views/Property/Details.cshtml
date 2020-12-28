@@ -53,9 +53,20 @@
             </div>
             <br />
             <div style="color: #999999; margin-left: 20px">
-                <a type="submit" asp-controller="Property" asp-action="Increment" asp-route-id="@this.Model.Id" class="btn btn-danger">Like</a>
+                @if (this.User.Identity.IsAuthenticated)
+                {
+                    if (!this.Model.IsItLiked)
+                    {
+                        <a type="submit" asp-controller="Likes" asp-action="Index" asp-route-id="@this.Model.Id" class="btn btn-danger">Like</a>
+                    }
+                    else
+                    {
+                        <a type="submit" asp-controller="Likes" asp-action="Decrement" asp-route-id="@this.Model.Id" class="btn btn-danger">Dislike</a>
+                    }
+
+                }
                 <span style="color:green">Total likes: </span>
-                @this.Model.Likes
+                @this.Model.LikesCount
                 @if (this.Model.IsItFavourite)
                 {
                     <button style="margin-left: 50px" type="submit" class="btn btn-success" disabled>In your list</button>
@@ -64,7 +75,7 @@
                 {
                     <a style="margin-left: 50px" type="submit" asp-controller="Favourite" asp-action="Add" asp-route-id="@this.Model.Id" class="btn btn-success">Add to Favourite</a>
                 }
-                
+
             </div>
         </div>
         <div class="col-md-4">
