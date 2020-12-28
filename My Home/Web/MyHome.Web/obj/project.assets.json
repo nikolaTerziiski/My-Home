@@ -2479,16 +2479,6 @@
           "bin/placeholder/MyHome.Services.Messaging.dll": {}
         }
       },
-      "MyHome.Web.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "compile": {
-          "bin/placeholder/MyHome.Web.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MyHome.Web.Infrastructure.dll": {}
-        }
-      },
       "MyHome.Web.ViewModels/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -8324,11 +8314,6 @@
       "path": "../../Services/MyHome.Services.Messaging/MyHome.Services.Messaging.csproj",
       "msbuildProject": "../../Services/MyHome.Services.Messaging/MyHome.Services.Messaging.csproj"
     },
-    "MyHome.Web.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../MyHome.Web.Infrastructure/MyHome.Web.Infrastructure.csproj",
-      "msbuildProject": "../MyHome.Web.Infrastructure/MyHome.Web.Infrastructure.csproj"
-    },
     "MyHome.Web.ViewModels/1.0.0": {
       "type": "project",
       "path": "../MyHome.Web.ViewModels/MyHome.Web.ViewModels.csproj",
@@ -8353,7 +8338,6 @@
       "MyHome.Services.Data >= 1.0.0",
       "MyHome.Services.Mapping >= 1.0.0",
       "MyHome.Services.Messaging >= 1.0.0",
-      "MyHome.Web.Infrastructure >= 1.0.0",
       "MyHome.Web.ViewModels >= 1.0.0",
       "StyleCop.Analyzers >= 1.2.0-beta.205"
     ]
@@ -8409,9 +8393,6 @@
             },
             "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services\\MyHome.Services.csproj": {
               "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services\\MyHome.Services.csproj"
-            },
-            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web.Infrastructure\\MyHome.Web.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web.Infrastructure\\MyHome.Web.Infrastructure.csproj"
             },
             "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj": {
               "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj"

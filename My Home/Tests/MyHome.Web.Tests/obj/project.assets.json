@@ -3663,7 +3663,6 @@
           "MyHome.Services.Data": "1.0.0",
           "MyHome.Services.Mapping": "1.0.0",
           "MyHome.Services.Messaging": "1.0.0",
-          "MyHome.Web.Infrastructure": "1.0.0",
           "MyHome.Web.ViewModels": "1.0.0"
         },
         "compile": {
@@ -3675,16 +3674,6 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
-      },
-      "MyHome.Web.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "compile": {
-          "bin/placeholder/MyHome.Web.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MyHome.Web.Infrastructure.dll": {}
-        }
       },
       "MyHome.Web.ViewModels/1.0.0": {
         "type": "project",
@@ -11124,11 +11113,6 @@
       "type": "project",
       "path": "../../Web/MyHome.Web/MyHome.Web.csproj",
       "msbuildProject": "../../Web/MyHome.Web/MyHome.Web.csproj"
-    },
-    "MyHome.Web.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../../Web/MyHome.Web.Infrastructure/MyHome.Web.Infrastructure.csproj",
-      "msbuildProject": "../../Web/MyHome.Web.Infrastructure/MyHome.Web.Infrastructure.csproj"
     },
     "MyHome.Web.ViewModels/1.0.0": {
       "type": "project",

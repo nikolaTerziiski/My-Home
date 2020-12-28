@@ -1,0 +1,35 @@
+﻿@model MyHome.Web.ViewModels.Reviews.MyReviewListViewModel
+<div class="row" style="justify-content:center; margin-bottom: 15px; font-size:45px">
+    <span style="color:purple">Your Reviews</span>
+</div>
+
+    <div class="container-fluid mt-100">
+        <div class="row">
+            @foreach (var review in this.Model.Reviews)
+            {
+                <div class="col-md-12">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <div class="media flex-wrap w-100 align-items-center">
+                                <img src="~/localImages/review/reviewUser.png" style="width:50px; height:50px" class="d-block ui-w-40 rounded-circle" alt="">
+                                <div class="media-body ml-3">
+                                    <span style="color: grey">Property title - @review.Home.Title</span>
+                                    <div class="text-muted small">
+                                        <time>@review.CreatedOn.ToString("O")</time>
+                                    </div>
+                                </div>
+                                <div class="text-muted small ml-3">
+                                      <div class="px-4 pt-3"> <a asp-controller="Property" asp-action="Details" asp-route-id="@review.Home.Id" type="button" class="btn btn-primary"><i class="fa fa-plus"></i>&nbsp; Details</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <article>
+                                @review.Content
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>

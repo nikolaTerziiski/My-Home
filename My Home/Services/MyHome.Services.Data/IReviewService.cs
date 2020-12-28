@@ -11,5 +11,7 @@
         public Task AddReview(string userId, CreateReviewInputModel inputModel);
 
         public ICollection<T> TakeById<T>(int homeId);
+
+        public ICollection<MyReviewInListViewModel> TakeForUser(string userId);
     }
 }

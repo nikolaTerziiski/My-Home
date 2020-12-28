@@ -41,7 +41,6 @@
           "MyHome.Services.Data": "1.0.0",
           "MyHome.Services.Mapping": "1.0.0",
           "MyHome.Services.Messaging": "1.0.0",
-          "MyHome.Web.Infrastructure": "1.0.0",
           "MyHome.Web.ViewModels": "1.0.0",
           "StyleCop.Analyzers": "1.2.0-beta.205",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -2169,14 +2168,6 @@
         },
         "compile": {
           "MyHome.Services.Messaging.dll": {}
-        }
-      },
-      "MyHome.Web.Infrastructure/1.0.0": {
-        "runtime": {
-          "MyHome.Web.Infrastructure.dll": {}
-        },
-        "compile": {
-          "MyHome.Web.Infrastructure.dll": {}
         }
       },
       "MyHome.Web.ViewModels/1.0.0": {
@@ -4957,11 +4948,6 @@
       "sha512": ""
     },
     "MyHome.Services.Messaging/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "MyHome.Web.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

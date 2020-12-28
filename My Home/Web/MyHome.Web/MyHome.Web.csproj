@@ -39,7 +39,6 @@
     <ProjectReference Include="..\..\Services\MyHome.Services.Mapping\MyHome.Services.Mapping.csproj" />
     <ProjectReference Include="..\..\Services\MyHome.Services.Messaging\MyHome.Services.Messaging.csproj" />
     <ProjectReference Include="..\..\Services\MyHome.Services\MyHome.Services.csproj" />
-    <ProjectReference Include="..\MyHome.Web.Infrastructure\MyHome.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\MyHome.Web.ViewModels\MyHome.Web.ViewModels.csproj" />
   </ItemGroup>
 </Project>

@@ -1,21 +1,23 @@
-﻿using MyHome.Data.Common.Repositories;
-using MyHome.Data.Models;
-using MyHome.Services.Mapping;
-using MyHome.Web.ViewModels.Reviews;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyHome.Services.Data
+﻿namespace MyHome.Services.Data
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    using MyHome.Data.Common.Repositories;
+    using MyHome.Data.Models;
+    using MyHome.Services.Mapping;
+    using MyHome.Web.ViewModels.Reviews;
+
     public class ReviewService : IReviewService
     {
         private readonly IDeletableEntityRepository<Review> reviewRepository;
         private readonly IDeletableEntityRepository<Home> homeRepository;
 
-        public ReviewService(IDeletableEntityRepository<Review> reviewRepository,
+        public ReviewService(
+                             IDeletableEntityRepository<Review> reviewRepository,
                              IDeletableEntityRepository<Home> homeRepository)
         {
             this.reviewRepository = reviewRepository;
@@ -46,6 +48,11 @@ namespace MyHome.Services.Data
         {
             var somth = this.reviewRepository.All().Where(x => x.HomeId == homeId).To<T>().ToList();
             return somth;
+        }
+
+        public ICollection<MyReviewInListViewModel> TakeForUser(string userId)
+        {
+            return this.reviewRepository.AllAsNoTracking().Where(x => x.AddedByUserId == userId).To<MyReviewInListViewModel>().ToList();
         }
     }
 }

@@ -18,7 +18,8 @@
         private readonly IReviewService reviewService;
         private readonly UserManager<ApplicationUser> userManager;
 
-        public ReviewController(IPropertyService propertyService,
+        public ReviewController(
+                                IPropertyService propertyService,
                                 IReviewService reviewService,
                                 UserManager<ApplicationUser> userManager)
         {
@@ -55,6 +56,15 @@
             await this.reviewService.AddReview(userId, inputModel);
 
             return this.RedirectToAction("Details", "Property", new { id = inputModel.Id });
+        }
+
+        public IActionResult My()
+        {
+            var userId = this.userManager.GetUserId(this.User);
+
+            var viewModel = new MyReviewListViewModel() { Reviews =  this.reviewService.TakeForUser(userId)};
+
+            return this.View(viewModel);
         }
     }
 }
