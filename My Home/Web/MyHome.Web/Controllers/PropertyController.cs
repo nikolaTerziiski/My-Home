@@ -175,14 +175,6 @@
             return this.RedirectToAction("Index", "Home");
         }
 
-        [Authorize]
-        public async Task<IActionResult> Increment(int id)
-        {
-            await this.propertyService.IncrementLikeAsync(id);
-
-            return this.RedirectToAction("Details", "Property", new { id = id });
-        }
-
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {

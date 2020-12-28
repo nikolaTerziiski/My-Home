@@ -30,8 +30,6 @@
 
         public Task DeletePropertyAsync(int id);
 
-        public Task IncrementLikeAsync(int id);
-
         public int GetAllByUserCount(string userId);
     }
 }

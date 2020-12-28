@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZXY25woI4p7MNctOnNGmsvJFU3Wb0tNT+kZPbJDuCRbhjbcsXP6Tu/ZAVG5LQf+Dlj6Gs/Cp3R/hvwEabxF2TA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

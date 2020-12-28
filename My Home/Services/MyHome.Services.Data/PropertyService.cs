@@ -40,28 +40,25 @@
                 Price = inputModel.Price,
             };
 
-            if (inputModel.Images.Count() > 0)
+            Directory.CreateDirectory($"{path}/homes");
+            foreach (var picture in inputModel.Images)
             {
-                Directory.CreateDirectory($"{path}/homes");
-                foreach (var picture in inputModel.Images)
+                var extension = Path.GetExtension(picture.FileName).TrimStart('.');
+                if (!this.allowedExtensions.Any(x => x == extension))
                 {
-                    var extension = Path.GetExtension(picture.FileName).TrimStart('.');
-                    if (!this.allowedExtensions.Any(x => x == extension))
-                    {
-                        throw new Exception("Invalid picture extenstion!");
-                    }
-
-                    var dbImage = new Image
-                    {
-                        AddedByUserId = userId,
-                        Extension = extension,
-                    };
-                    home.Images.Add(dbImage);
-
-                    var realPath = $"{path}/homes/{dbImage.Id}.{extension}";
-                    using Stream fileStream = new FileStream(realPath, FileMode.Create);
-                    await picture.CopyToAsync(fileStream);
+                    throw new Exception("Invalid picture extenstion!");
                 }
+
+                var dbImage = new Image
+                {
+                    AddedByUserId = userId,
+                    Extension = extension,
+                };
+                home.Images.Add(dbImage);
+
+                var realPath = $"{path}/homes/{dbImage.Id}.{extension}";
+                using Stream fileStream = new FileStream(realPath, FileMode.Create);
+                await picture.CopyToAsync(fileStream);
             }
 
 
@@ -72,7 +69,7 @@
         public async Task DeletePropertyAsync(int id)
         {
             var result = this.propertyRepository.All().Where(x => x.Id == id).FirstOrDefault();
-            this.propertyRepository.Delete(result);
+            this.propertyRepository.HardDelete(result);
             await this.propertyRepository.SaveChangesAsync();
         }
 
@@ -112,14 +109,6 @@
             return this.propertyRepository.AllAsNoTracking().Count();
         }
 
-        public async Task IncrementLikeAsync(int id)
-        {
-            //var home = this.propertyRepository.All().Where(x => x.Id == id).FirstOrDefault();
-            //home.Likes += 1;
-
-            //await this.propertyRepository.SaveChangesAsync();
-        }
-
         public T TakeOneById<T>(int id)
         {
             if (id <= 0)
@@ -140,6 +129,11 @@
 
         public async Task UpdateAsync(int id, EditHomeInputModel inputModel)
         {
+            if (!this.DoesContainProperty(id))
+            {
+                throw new InvalidOperationException("Invalid id!");
+            }
+
             var home = this.propertyRepository.All().First(x => x.Id == id);
             home.Title = inputModel.Title;
             home.Description = inputModel.Description;
