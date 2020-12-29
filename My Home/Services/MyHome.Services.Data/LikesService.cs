@@ -33,6 +33,7 @@
 
         public bool DoesContainUser(int propertyId, string userId)
         {
+            var likes = this.likeRepository.All().Where(x => x.HomeId == propertyId).ToList();
             if (this.likeRepository.All().Any(x => x.HomeId == propertyId && x.AddedByUserId == userId))
             {
                 return true;
@@ -43,6 +44,8 @@
 
         public async Task IncrementLikeAsync(int propertyId, string userId)
         {
+
+
             if (this.DoesContainUser(propertyId, userId))
             {
                 throw new InvalidOperationException("You cannot like second time!");

@@ -40,7 +40,6 @@
             Directory.CreateDirectory($"{path}/categorySearch");
 
             var extension = Path.GetExtension(inputModel.Image.FileName).TrimStart('.');
-
             if (!this.allowedExtensions.Any(x => x == extension))
             {
                 throw new Exception("Invalid picture extenstion!");

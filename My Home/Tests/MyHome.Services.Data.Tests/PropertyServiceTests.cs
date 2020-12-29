@@ -18,7 +18,6 @@
     {
 
         [Fact]
-
         public void MustGiveExceptionIfWeSearchWithNegativeId()
         {
             var service = new PropertyService(new FakePropertyReposiory());
@@ -226,6 +225,9 @@
             mockRepo.Setup(x => x.AllAsNoTracking()).Returns(list.AsQueryable());
             mockRepo.Setup(x => x.AddAsync(It.IsAny<Home>())).Callback((Home home) => list.Add(home));
             var service = new PropertyService(mockRepo.Object);
+
+            Action act = () => service.GetAll(-5, 8 );
+            var invalidOperationException = Assert.Throws<InvalidOperationException>(act);
 
             //First test when is empty
             var zero = service.GetAll(1, 8).Count();
@@ -442,6 +444,9 @@
             list[16].Category = new Category() { Name = "Apartment" };
             list[17].Category = new Category() { Name = "Garage" };
 
+
+            Action act = () => service.GetAllWithCategory("Random", -2, 8);
+            var invalidOperationException = Assert.Throws<InvalidOperationException>(act);
 
             Assert.Equal(1, service.GetAllWithCategory("House", 2, 8).Count());
             Assert.Equal(6, service.GetAllWithCategory("Apartment", 1, 8).Count());

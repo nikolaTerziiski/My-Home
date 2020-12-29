@@ -85,6 +85,10 @@
 
         public IEnumerable<PropertyInListViewModel> GetAll(int id, int listCount)
         {
+            if (id < 0)
+            {
+                throw new InvalidOperationException("Page must be positive number!");
+            }
             var result = this.propertyRepository.AllAsNoTracking().OrderByDescending(x => x.Id).Skip((id - 1) * listCount).Take(listCount)
                 .To<PropertyInListViewModel>().ToList();
 
@@ -93,6 +97,10 @@
 
         public IEnumerable<PropertyInListViewModel> GetAllWithCategory(string type, int id, int listCount)
         {
+            if (id < 0)
+            {
+                throw new InvalidOperationException("Page must be positive number!");
+            }
             var result = this.propertyRepository.AllAsNoTracking().Where(x => x.Category.Name.ToLower() == type.ToLower()).OrderByDescending(x => x.Id).Skip((id - 1) * listCount).Take(listCount)
                 .To<PropertyInListViewModel>().ToList();
 

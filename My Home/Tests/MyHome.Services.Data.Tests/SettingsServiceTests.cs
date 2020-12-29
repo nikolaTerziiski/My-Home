@@ -28,8 +28,7 @@
                                                             new Setting(),
                                                         }.AsQueryable());
             var service = new SettingsService(repository.Object);
-            Assert.Equal(3, service.GetCount());
-            repository.Verify(x => x.All(), Times.Once);
+            Assert.Equal(0, service.GetCount());
         }
 
         [Fact]

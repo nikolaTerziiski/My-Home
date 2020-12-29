@@ -7,7 +7,7 @@
     using MyHome.Data.Models;
     using MyHome.Services.Mapping;
 
-    public class MyReviewInListViewModel : IMapFrom<Review>
+    public class MyReviewInListViewModel : IMapFrom<Favourite>
     {
         public int Id { get; set; }
 

@@ -39,15 +39,12 @@
             home.Reviews.Add(review);
 
             await this.homeRepository.SaveChangesAsync();
-
-            var reviewsss = this.homeRepository.All().Where(x => x.Id == inputModel.Id).FirstOrDefault().Reviews;
-
         }
 
         public ICollection<T> TakeById<T>(int homeId)
         {
-            var somth = this.reviewRepository.All().Where(x => x.HomeId == homeId).To<T>().ToList();
-            return somth;
+            var result = this.reviewRepository.All().Where(x => x.HomeId == homeId).To<T>().ToList();
+            return result;
         }
 
         public ICollection<MyReviewInListViewModel> TakeForUser(string userId)

@@ -1,12 +1,13 @@
-﻿using MyHome.Data.Models;
-using MyHome.Services.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MyHome.Web.ViewModels.Reviews
+﻿namespace MyHome.Web.ViewModels.Reviews
 {
-    public class PropertyDetailsReviewViewModel : IMapFrom<Review>
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    using MyHome.Data.Models;
+    using MyHome.Services.Mapping;
+
+    public class PropertyDetailsReviewViewModel : IMapFrom<Favourite>
     {
         public ApplicationUser AddedByUser { get; set; }
 

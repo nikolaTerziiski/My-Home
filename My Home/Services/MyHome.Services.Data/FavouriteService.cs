@@ -14,18 +14,15 @@
     public class FavouriteService : IFavouriteService
     {
         private readonly IDeletableEntityRepository<Favourite> favouritesRepository;
-        private readonly UserManager<ApplicationUser> userManager;
         private readonly IDeletableEntityRepository<Home> propertyRepository;
         private readonly IDeletableEntityRepository<FavouriteHome> favouriteHomeRepository;
 
         public FavouriteService(
                                 IDeletableEntityRepository<Favourite> favouritesRepository,
-                                UserManager<ApplicationUser> userManager,
                                 IDeletableEntityRepository<Home> propertyRepository,
                                 IDeletableEntityRepository<FavouriteHome> favouriteHomeRepository)
         {
             this.favouritesRepository = favouritesRepository;
-            this.userManager = userManager;
             this.propertyRepository = propertyRepository;
             this.favouriteHomeRepository = favouriteHomeRepository;
         }
@@ -46,15 +43,15 @@
                 return;
             }
 
-            var favourteHome = new FavouriteHome { FavouriteId = favourite.Id, HomeId = id };
-
-
-            favourite.FavouriteHomes.Add(favourteHome);
-            home.FavouriteHomes.Add(favourteHome);
             if (this.favouriteHomeRepository.AllAsNoTracking().Where(x => x.FavouriteId == favourite.Id).Any(x => x.HomeId == id))
             {
                 throw new InvalidOperationException("You already have this in your list!");
             }
+
+            var favourteHome = new FavouriteHome { FavouriteId = favourite.Id, HomeId = id };
+
+            favourite.FavouriteHomes.Add(favourteHome);
+            home.FavouriteHomes.Add(favourteHome);
 
             await this.favouriteHomeRepository.AddAsync(favourteHome);
             await this.favouriteHomeRepository.SaveChangesAsync();
@@ -65,6 +62,11 @@
         public bool DoesContain(int id, string userId)
         {
             var favourite = this.favouritesRepository.All().Where(x => x.UserId == userId).FirstOrDefault();
+
+            if (favourite == null)
+            {
+                return false;
+            }
 
             var favouriteHomesAll = this.favouriteHomeRepository.All().Where(x => x.FavouriteId == favourite.Id);
             if (favouriteHomesAll.Any(x => x.HomeId == id))
@@ -79,8 +81,8 @@
         {
             var myFavouriteId = this.favouritesRepository.AllAsNoTracking().Where(x => x.UserId == id).FirstOrDefault().Id;
 
-            var myFavourite = this.favouriteHomeRepository.AllAsNoTracking().Where(x => x.FavouriteId == myFavouriteId).Select(x => x.HomeId);
-
+            var myFavourite = this.favouriteHomeRepository.AllAsNoTracking().Where(x => x.FavouriteId == myFavouriteId).Select(x => x.HomeId).ToList();
+           
             var homes = this.propertyRepository.AllAsNoTracking().Where(x => myFavourite.Contains(x.Id)).Select(x => new FavouriteInList
             {
                 Id = x.Id,
@@ -99,8 +101,17 @@
         {
             var favourite = this.favouritesRepository.AllAsNoTracking().Where(x => x.UserId == userId).FirstOrDefault();
 
+            if (favourite == null)
+            {
+                throw new InvalidOperationException("User does not exists!");
+            }
             var favouriteHome = this.favouriteHomeRepository.All().Where(x => x.FavouriteId == favourite.Id && x.HomeId == id).FirstOrDefault();
-            this.favouriteHomeRepository.Delete(favouriteHome);
+
+            if (favouriteHome == null)
+            {
+                throw new InvalidOperationException("User does not have in favourites this property!");
+            }
+            this.favouriteHomeRepository.HardDelete(favouriteHome);
 
             await this.favouriteHomeRepository.SaveChangesAsync();
         }

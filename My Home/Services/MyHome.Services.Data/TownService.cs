@@ -26,6 +26,7 @@
 
         public ICollection<TownInTableViewModel> GetAllTownsForTable()
         {
+            var test = this.townRepository.All().ToList();
             return this.townRepository.All().OrderByDescending(e => e.Homes.Count()).Take(8).To<TownInTableViewModel>().ToList();
         }
     }
