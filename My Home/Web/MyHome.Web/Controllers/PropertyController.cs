@@ -245,7 +245,7 @@
 
             var user = await this.userManager.GetUserAsync(this.User);
             bool isAdmin = await this.userManager.IsInRoleAsync(user, GlobalConstants.AdministratorRoleName);
-            await this.propertyService.UpdateAsync(id, inputModel);
+            await this.propertyService.UpdateAsync(id, inputModel, isAdmin);
             return this.RedirectToAction("Details", "Property", new { id = id });
         }
 
