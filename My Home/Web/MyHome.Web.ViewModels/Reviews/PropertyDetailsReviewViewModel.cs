@@ -7,7 +7,7 @@
     using MyHome.Data.Models;
     using MyHome.Services.Mapping;
 
-    public class PropertyDetailsReviewViewModel : IMapFrom<Favourite>
+    public class PropertyDetailsReviewViewModel : IMapFrom<Review>
     {
         public ApplicationUser AddedByUser { get; set; }
 

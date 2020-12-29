@@ -67,5 +67,16 @@
 
             return this.View(viewModel);
         }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var user = await this.userManager.GetUserAsync(this.User);
+            var flag = await this.userManager.IsInRoleAsync(user, "Administrator");
+
+            await this.reviewService.Delete(id, user.Id, flag);
+            return this.RedirectToAction("My", "Review");
+        }
     }
 }

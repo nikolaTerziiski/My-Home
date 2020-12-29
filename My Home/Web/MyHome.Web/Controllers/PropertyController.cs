@@ -8,6 +8,7 @@
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
+    using MyHome.Common;
     using MyHome.Data;
     using MyHome.Data.Models;
     using MyHome.Services.Data;
@@ -71,6 +72,12 @@
                 viewModel.Towns = this.townService.GetAllTowns();
                 return this.View(viewModel);
             }
+
+            //Validation for SQL injection
+            inputModel.Description = HtmlUtilities.EncodeThisPropertyForMe(inputModel.Description);
+            inputModel.Adress = HtmlUtilities.EncodeThisPropertyForMe(inputModel.Adress);
+            inputModel.Title = HtmlUtilities.EncodeThisPropertyForMe(inputModel.Title);
+
 
             var user = await this.userManager.GetUserAsync(this.User);
 
@@ -208,6 +215,7 @@
 
         [HttpGet]
         [Authorize]
+        [AutoValidateAntiforgeryToken]
         public IActionResult Edit(int id)
         {
             var viewModel = this.propertyService.TakeOneById<EditHomeInputModel>(id);
@@ -221,6 +229,20 @@
         [Authorize]
         public async Task<IActionResult> Edit(int id, EditHomeInputModel inputModel)
         {
+            if (!this.ModelState.IsValid)
+            {
+                var viewModel = this.propertyService.TakeOneById<EditHomeInputModel>(id);
+                viewModel.Categories = this.categoryService.GetAllCategories();
+                viewModel.Towns = this.townService.GetAllTowns();
+
+                return this.View(viewModel);
+            }
+
+            //Validation for SQL injection
+            inputModel.Description = HtmlUtilities.EncodeThisPropertyForMe(inputModel.Description);
+            inputModel.Adress = HtmlUtilities.EncodeThisPropertyForMe(inputModel.Adress);
+            inputModel.Title = HtmlUtilities.EncodeThisPropertyForMe(inputModel.Title);
+
             var user = await this.userManager.GetUserAsync(this.User);
             await this.propertyService.UpdateAsync(id, inputModel);
             return this.RedirectToAction("Details", "Property", new { id = id });
@@ -228,6 +250,7 @@
 
         [HttpGet]
         [Authorize]
+        [AutoValidateAntiforgeryToken]
         public IActionResult My()
         {
 

@@ -70,6 +70,7 @@
             services.AddTransient<IFavouriteService, FavouriteService>();
             services.AddTransient<IReviewService, ReviewService>();
             services.AddTransient<ILikesService, LikesService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

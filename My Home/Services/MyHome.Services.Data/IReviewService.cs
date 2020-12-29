@@ -13,5 +13,6 @@
         public ICollection<T> TakeById<T>(int homeId);
 
         public ICollection<MyReviewInListViewModel> TakeForUser(string userId);
+        public Task Delete(int id, string userId, bool isAdministrator);
     }
 }

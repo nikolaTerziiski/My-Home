@@ -41,6 +41,29 @@
             await this.homeRepository.SaveChangesAsync();
         }
 
+        public async Task Delete(int id, string userId, bool isAdministrator)
+        {
+            var review = this.reviewRepository.AllAsNoTracking().Where(x => x.Id == id).FirstOrDefault();
+            if (review == null)
+            {
+                throw new InvalidOperationException("Invalid review id");
+            }
+            if (isAdministrator)
+            {
+                this.reviewRepository.HardDelete(review);
+                await this.reviewRepository.SaveChangesAsync();
+                return;
+            }
+            else if (review.AddedByUserId == userId)
+            {
+                this.reviewRepository.HardDelete(review);
+                await this.reviewRepository.SaveChangesAsync();
+                return;
+            }
+
+            throw new InvalidOperationException("You can't delete other people reviews!");
+        }
+
         public ICollection<T> TakeById<T>(int homeId)
         {
             var result = this.reviewRepository.All().Where(x => x.HomeId == homeId).To<T>().ToList();
