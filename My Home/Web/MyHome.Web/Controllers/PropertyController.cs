@@ -244,6 +244,7 @@
             inputModel.Title = HtmlUtilities.EncodeThisPropertyForMe(inputModel.Title);
 
             var user = await this.userManager.GetUserAsync(this.User);
+            bool isAdmin = await this.userManager.IsInRoleAsync(user, GlobalConstants.AdministratorRoleName);
             await this.propertyService.UpdateAsync(id, inputModel);
             return this.RedirectToAction("Details", "Property", new { id = id });
         }

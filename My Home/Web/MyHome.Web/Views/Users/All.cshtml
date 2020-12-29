@@ -27,13 +27,7 @@
                     <td>@user.HomesCount</td>
                     <td>@user.Role</td>
                     <td>
-                        @if (user.Role == "User")
-                        {
-                            <a class="btn btn-primary" asp-controller="Details" asp-action="Users" asp-route-id="@user.Id">
-                                Details
-                            </a>
-                        }
-                        else if (user.Id == this.Model.CurrentUserId)
+                        @if (user.Id == this.Model.CurrentUserId)
                         {
                             <div>You</div>   
                         }

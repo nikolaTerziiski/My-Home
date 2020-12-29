@@ -2759,11 +2759,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj",
       "projectName": "MyHome.Services.Messaging",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

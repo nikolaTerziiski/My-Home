@@ -8349,11 +8349,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web\\MyHome.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Web\\MyHome.Web\\MyHome.Web.csproj",
       "projectName": "MyHome.Web",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web\\MyHome.Web.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Web\\MyHome.Web\\MyHome.Web.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Web\\MyHome.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8373,29 +8373,29 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data\\MyHome.Data.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data\\MyHome.Data.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data\\MyHome.Data.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data\\MyHome.Data.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\MyHome.Common\\MyHome.Common.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\MyHome.Common\\MyHome.Common.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\MyHome.Common\\MyHome.Common.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\MyHome.Common\\MyHome.Common.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Data\\MyHome.Services.Data.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services\\MyHome.Services.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services\\MyHome.Services.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services\\MyHome.Services.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services\\MyHome.Services.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj"
             }
           }
         }

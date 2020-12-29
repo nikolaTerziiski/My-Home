@@ -1406,11 +1406,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj",
       "projectName": "MyHome.Web.ViewModels",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\MyHome.Web.ViewModels.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Web\\MyHome.Web.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1430,11 +1430,11 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj"
             }
           }
         }

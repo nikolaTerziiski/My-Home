@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZXY25woI4p7MNctOnNGmsvJFU3Wb0tNT+kZPbJDuCRbhjbcsXP6Tu/ZAVG5LQf+Dlj6Gs/Cp3R/hvwEabxF2TA==",
+  "dgSpecHash": "CjY2Ze1XL1/v22C0n37E3hHL+BagTshXCHwbxWt4Y3/kR96+kCIusImW0gHLaIQJKl2+MOo+xfvNJ/RuGLIU9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Mapping\\MyHome.Services.Mapping.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

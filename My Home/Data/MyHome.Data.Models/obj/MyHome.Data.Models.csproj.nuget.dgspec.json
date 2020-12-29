@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj": {}
+    "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj",
         "projectName": "MyHome.Data.Common",
-        "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Common\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj",
         "projectName": "MyHome.Data.Models",
-        "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Models\\MyHome.Data.Models.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Models\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -100,8 +100,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj": {
-                "projectPath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj"
+              "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj": {
+                "projectPath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Data\\MyHome.Data.Common\\MyHome.Data.Common.csproj"
               }
             }
           }

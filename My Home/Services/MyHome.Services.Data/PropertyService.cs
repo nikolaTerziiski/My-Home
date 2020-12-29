@@ -135,7 +135,7 @@
             return propertyFromData;
         }
 
-        public async Task UpdateAsync(int id, EditHomeInputModel inputModel)
+        public async Task UpdateAsync(int id, EditHomeInputModel inputModel, bool isAdmin)
         {
             if (!this.DoesContainProperty(id))
             {

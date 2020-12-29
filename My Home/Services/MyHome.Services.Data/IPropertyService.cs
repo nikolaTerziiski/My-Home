@@ -16,7 +16,7 @@
 
         public Task IncrementView(int id);
 
-        public Task UpdateAsync(int id,  EditHomeInputModel inputModel);
+        public Task UpdateAsync(int id,  EditHomeInputModel inputModel, bool isAdmin);
 
         public IEnumerable<PropertyInListViewModel> GetAll(int id, int listCount);
 

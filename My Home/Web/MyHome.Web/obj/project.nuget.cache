@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5T+LoddQEd/i4Ga5vSSkdfpJz2lli6rdneSfMbRJsRYKZzdOVn3BeN3oxoNjKyIiAeYGCotf62pKkOF5TePn+w==",
+  "dgSpecHash": "saIG199xQLjuBCsAAfj4nv7FImrXwU7byb2AG2wJC0Pcsh5qQpHXJj7jHTW6hyHl8ZewvEwHGmZPJxPYhyWa4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Web\\MyHome.Web\\MyHome.Web.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Web\\MyHome.Web\\MyHome.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",

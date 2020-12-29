@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C8TE43R9SvIF83moc1u+NNqO5aDN8v31ORE3QppThTpW/QLRj3uIaTOHDQQgzxKPNTY/Z1QynfAttgCzFGxkhg==",
+  "dgSpecHash": "dCQYltHGFjisL0GnPw7tTWLDMjHSW5EOSOGb18pNqy8cQUrXxuRc3OWxp98bq9eEcH6KviBseDCeA+ebVR/Tmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\ASP.NET Project 2\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\Project defense final\\My-Home\\My Home\\Services\\MyHome.Services.Messaging\\MyHome.Services.Messaging.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
